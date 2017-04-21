@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: url("http://pic.90sjimg.com/back_pic/u/00/38/01/53/55fb69ad802f4.jpg") no-repeat center;
+  height: 700px;
+}
+body h2 {
+  text-align: center;
+  font-size: 40px;
+  color: white;
+}
+body .content {
+  width: 1064px;
+  margin: 50px auto 0;
+}
+body .content .content-item {
+  width: 250px;
+  background: rgba(0, 0, 0, 0.8);
+  float: left;
+  box-sizing: border-box;
+  margin: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+body .content .content-item:hover {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+body .content .content-item:hover img {
+  transform: scale(1.07);
+}
+body .content .content-item div {
+  box-sizing: border-box;
+  margin: 20px;
+  overflow: hidden;
+  position: relative;
+}
+body .content .content-item div:first-child:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.4) 80%, rgba(0, 0, 0, 0.7) 100%);
+}
+body .content .content-item div img {
+  width: 100%;
+  transition: .5s;
+}
+body .content .content-item div h3 {
+  color: white;
+  opacity: 0.9;
+  text-align: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+body .content .content-item div p {
+  color: #999;
+  text-align: center;
+  font-size: 12px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+body .content .content-item .text {
+  margin: 0;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+@media all and (max-width: 1100px) {
+  body .content {
+    width: 800px;
+  }
+}
+/*# sourceMappingURL=index.css.map */
