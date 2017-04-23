@@ -1,0 +1,1265 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+//清楚浮动
+.clearfix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.header {
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+  background: #fff;
+  border-bottom: 1px #f2f2f2 solid;
+  .menu-list {
+    display: none;
+  }
+  .main {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    height: 80px;
+    line-height: 80px;
+    .menu {
+      display: none;
+    }
+    .assembly {
+      position: absolute;
+      right: 0;
+      line-height: normal;
+      margin-top: 25px;
+      a {
+        margin-right: 5px;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border: 1px #999 solid;
+        border-radius: 50%;
+        position: relative;
+        cursor: pointer;
+        &:first-child:hover {
+          background: #008cd6;
+          border-color: #008cd6;
+        }
+        b {
+          display: block;
+          background: red;
+          width: 18px;
+          height: 18px;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin-left: -9px;
+          margin-top: -9px;
+          background: url("http://www.vivo.com.cn/images/vivo-gb-ico.png?v=9") no-repeat;
+        }
+      }
+      .customerService {
+        b {
+          background-position: -36px 0;
+        }
+        &:hover b {
+          background-position: -36px -18px;
+        }
+      }
+      .search {
+
+      }
+      .login {
+        b {
+          background-position: -18px 0;
+        }
+      }
+
+    }
+    .nav {
+      width: 50%;
+      margin: auto;
+
+      ul {
+        list-style: none;
+        li {
+          overflow: hidden;
+          float: left;
+          height: 100%;
+          padding: 0 26px;
+          transition-delay: 0s;
+          transition: background-color 0.3s ease;
+          color: #666;
+          cursor: pointer;
+          &:first-child {
+            background: #008cd6;
+            color: white;
+          }
+          &:hover {
+            background: #008cd6;
+            color: white;
+          }
+        }
+      }
+    }
+    .logo {
+      float: left;
+      height: 80px;
+      line-height: 80px;
+    }
+  }
+}
+
+.carousel-content {
+  position: relative;
+  height: 734px;
+  .carousel {
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    top: 0;
+    height: 734px;
+    overflow: hidden;
+    width: 100%;
+    .main-carousel {
+      width: 300%;
+      display: flex;
+      height: 100%;
+      transition-duration: 0.8s;
+      .list-carousel {
+        flex-grow: 1;
+        height: 100%;
+        background-size: auto 100% !important;
+        .item-carousel {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          .title {
+            position: absolute;
+            top: 65px;
+            left: 50%;
+            margin-left: -150px;
+            width: 300px;
+            z-index: 2;
+            img {
+              transition-duration: 3.8s;
+              display: block;
+              margin: 0 auto;
+              height: 37px;
+            }
+          }
+          .figure {
+            width: 577px;
+            height: 387px;
+            position: absolute;
+            left: 50%;
+            margin-left: -263px;
+            bottom: 50px;
+            .phone {
+              height: 100%;
+              position: absolute;
+              bottom: 0;
+              transition-duration: 3.8s;
+            }
+            .tips {
+              width: 335px;
+              height: 15px;
+              position: absolute;
+              bottom: 0;
+              left: -150px;
+            }
+          }
+        }
+      }
+      .list1 {
+        background: #000 url(//files.vivo.com.cn/static/www/vivo/high/x9i/vm-h-x9i-bg.jpg) center center no-repeat;
+        background-size: 100% 100% !important;
+        .item-carousel {
+          .title {
+            transform: matrix(1, 0, 0, 1, 0, -20);
+            opacity: 0;
+          }
+          .figure {
+            opacity: 0;
+          }
+        }
+      }
+      .list2 {
+        background: #fff url(//files.vivo.com.cn/static/www/vivo/high/x9pyy/vm-h-x9pyy-bg.jpg) center center no-repeat;
+        .item-carousel {
+          .title {
+            top: 90px;
+            img {
+              height: 36px;
+              transform: matrix(1, 0, 0, 1, 0, -20);
+              opacity: 0;
+            }
+          }
+          .tip {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            width: 375px;
+            height: 15px;
+            margin-left: -187.5px;
+            img {
+              height: 100%;
+            }
+          }
+        }
+      }
+      .list3 {
+        background: #fff url(//files.vivo.com.cn/static/www/vivo/high/xplay6/vm-h-xplay6-bg.jpg) center center no-repeat;
+        .item-carousel {
+          .title {
+            left: 50%;
+            margin-left: -370px;
+            top: 242px;
+            img {
+              height: 45px;
+              transform: matrix(1, 0, 0, 1, 0, 30);
+              opacity: 0;
+            }
+          }
+          .tip {
+            width: 759px;
+            height: 630px;
+            position: absolute;
+            left: 50%;
+            top: 100px;
+            margin-left: -100px;
+            img {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              transform: translate(5%, 0%) matrix(1, 0, 0, 1, 0, 0);
+              &:first-child {
+                z-index: 2;
+                transform: translate(-5%, 0%) matrix(1, 0, 0, 1, 0, 0);
+              }
+            }
+          }
+        }
+      }
+      .active {
+        .item-carousel {
+          .title {
+            transform: matrix(1, 0, 0, 1, 0, 0);
+
+            opacity: 1;
+            img {
+              transform: matrix(1, 0, 0, 1, 0, 0);
+              opacity: 1;
+            }
+
+          }
+          .figure {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .carousel-dot {
+      position: absolute;
+      width: 100%;
+      bottom: 20px;
+      text-align: center;
+      z-index: 999;
+      i {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin: 0 6px;
+        background-color: #d9d9d9;
+        border-radius: 50%;
+        transform: scale(.82);
+        cursor: pointer;
+        &:hover {
+          transform: scale(1);
+          background-color: #008cd6;
+        }
+      }
+      .active {
+        transform: scale(1);
+        background-color: #008cd6;
+      }
+    }
+  }
+}
+
+.showStyle {
+  position: relative;
+  z-index: 999;
+  background: #f6f7f8;
+  .main {
+    display: flex;
+    .item {
+      flex-grow: 1;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      height: 480px;
+      &:hover {
+        i {
+          background-position: -420px 0;
+        }
+      }
+      i {
+        display: block;
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        z-index: 999;
+        left: 50%;
+        top: 50%;
+        margin-left: -40px;
+        margin-top: -40px;
+        background: url("http://www.vivo.com.cn/images/vivo-gb-ico.png?v=9") no-repeat -520px 0;
+      }
+      &:last-child {
+        .title {
+          color: #999;
+          font-size: 14px;
+        }
+      }
+      img {
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        margin-left: -422.5px;
+      }
+      .title {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        bottom: 60px;
+        color: white;
+        font-size: 18px;
+      }
+      h3 {
+        font-weight: 100;
+        width: 100%;
+        bottom: 80px;
+        text-align: center;
+        position: absolute;
+        font-size: 18px;
+        color: #333;
+      }
+
+    }
+  }
+}
+
+.content {
+  background: #f6f7f8;
+  position: relative;
+  width: 100%;
+  z-index: 999;
+  .activity {
+    width: 1400px;
+    padding-top: 100px;
+    margin: 0 auto;
+    h2 {
+      a {
+        line-height: 32px;
+        color: #999;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 100;
+        margin-left: 15px;
+        border: 1px #999 solid;
+        padding: .5em 1em;
+        transition: all .3s cubic-bezier(.73, .03, .31, 1);
+        cursor: pointer;
+        &:hover {
+          color: #008cd6;
+          border-color: #008cd6;
+          &:after {
+            background-position: -583px -137px;
+          }
+        }
+        &:after {
+          width: 4px;
+          display: inline-block;
+          overflow: hidden;
+          height: 8px;
+          background: url("http://www.vivo.com.cn/images/vivo-gb-ico.png?v=9") no-repeat -583px -125px;
+          vertical-align: 0;
+          margin-left: 5px;
+          transition: all .3s cubic-bezier(.73, .03, .31, 1);
+          content: '';
+          background-size: 600px 400px;
+        }
+      }
+    }
+    .list {
+      list-style: none;
+      margin-top: 40px;
+      .item {
+        float: left;
+        width: 25%;
+        a {
+          display: block;
+          margin: 0 5px;
+          overflow: hidden;
+          box-sizing: border-box;
+          img {
+            width: 100%;
+            margin-bottom: 15px;
+          }
+          h3 {
+            font-size: 16px;
+            color: #000;
+            line-height: 1.8em;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 90%;
+            text-overflow: ellipsis;
+            font-weight: 300;
+          }
+          p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1em;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 90%;
+            text-overflow: ellipsis;
+          }
+        }
+        span {
+          display: block;
+          margin: 0 5px;
+          color: #999;
+          font-weight: bold;
+          font-size: 14px;
+          margin-top: 1em;
+          padding-top: 1em;
+          position: relative;
+          &:after {
+            content: "";
+            width: 20px;
+            height: 1px;
+            background: #ccc;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+
+  }
+  .dynamic {
+    width: 1400px;
+    padding-top: 100px;
+    margin: 0 auto;
+    h2 {
+      a {
+        line-height: 32px;
+        color: #999;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 100;
+        margin-left: 15px;
+        border: 1px #999 solid;
+        padding: .5em 1em;
+        transition: all .3s cubic-bezier(.73, .03, .31, 1);
+        cursor: pointer;
+        &:hover {
+          color: #008cd6;
+          border-color: #008cd6;
+          &:after {
+            background-position: -583px -137px;
+          }
+        }
+        &:after {
+          width: 4px;
+          display: inline-block;
+          overflow: hidden;
+          height: 8px;
+          background: url("http://www.vivo.com.cn/images/vivo-gb-ico.png?v=9") no-repeat -583px -125px;
+          vertical-align: 0;
+          margin-left: 5px;
+          transition: all .3s cubic-bezier(.73, .03, .31, 1);
+          content: '';
+          background-size: 600px 400px;
+        }
+      }
+    }
+
+    .main {
+      margin-top: 40px;
+      .list {
+        height: 100px;
+        list-style: none;
+        margin-left: -40px;
+        margin-right: -40px;
+        .item {
+          float: left;
+          width: 33%;
+          height: 100%;
+          position: relative;
+          a {
+            display: block;
+            height: 100%;
+            margin: 0 40px;
+            .info {
+              width: 100px;
+              height: 100%;
+              position: absolute;
+            }
+            .int {
+              margin-left: 120px;
+
+              h3 {
+                font-size: 16px;
+                font-weight: 100;
+                white-space: nowrap;
+                overflow: hidden;
+                width: 90%;
+                text-overflow: ellipsis;
+                line-height: 1.4em;
+                margin-bottom: .5em;
+                transition: color .3s cubic-bezier(.73, .03, .31, 1);
+                em {
+                  padding: .5em;
+                  border-radius: 5px;
+                  background: #008cd6;
+                  margin-right: 5px;
+                  color: white;
+                  font-style: normal;
+                  font-weight: 100;
+                  font-size: 12px;
+                }
+              }
+              p {
+                font-size: 14px;
+                color: #666;
+                height: 3em;
+                line-height: 1.5em;
+                margin-bottom: .6em;
+                padding-right: 3em;
+                overflow: hidden;
+                width: 90%;
+                -webkit-transition: color .3s cubic-bezier(.73, .03, .31, 1);
+                -moz-transition: color .3s cubic-bezier(.73, .03, .31, 1);
+                transition: color .3s cubic-bezier(.73, .03, .31, 1);
+
+              }
+              span {
+                font-size: 12px;
+                color: #999;
+                position: absolute;
+                bottom: 0;
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+  .media {
+    width: 100%;
+    margin-top: 70px;
+    background: #edeff1;
+
+    .main {
+      width: 1400px;
+      margin: 0 auto;
+      padding-top: 70px;
+      position: relative;
+      padding-bottom: 120px;
+      h2 {
+        a {
+          line-height: 32px;
+          color: #999;
+          border-radius: 50px;
+          font-size: 12px;
+          font-weight: 100;
+          margin-left: 15px;
+          border: 1px #999 solid;
+          padding: .5em 1em;
+          transition: all .3s cubic-bezier(.73, .03, .31, 1);
+          cursor: pointer;
+          &:hover {
+            color: #008cd6;
+            border-color: #008cd6;
+            &:after {
+              background-position: -583px -137px;
+            }
+          }
+          &:after {
+            width: 4px;
+            display: inline-block;
+            overflow: hidden;
+            height: 8px;
+            background: url("http://www.vivo.com.cn/images/vivo-gb-ico.png?v=9") no-repeat -583px -125px;
+            vertical-align: 0;
+            margin-left: 5px;
+            transition: all .3s cubic-bezier(.73, .03, .31, 1);
+            content: '';
+            background-size: 600px 400px;
+          }
+        }
+      }
+      & > div {
+        margin-top: 40px;
+        .list {
+          list-style: none;
+          margin-left: -40px;
+          margin-right: -40px;
+          .item {
+            float: left;
+            width: 33%;
+            .item-top {
+              margin-left: 40px;
+              margin-right: 40px;
+              .cont {
+                float: left;
+                font-weight: 100;
+                line-height: 1.2em;
+                font-size: 14px;
+                height: 6.2em;
+                width: 65%;
+                h3 {
+                  font-weight: 100;
+                  font-size: 16px;
+                }
+                p {
+                  color: #666;
+                  overflow: hidden;
+                  padding-top: .5em;
+                  height: 4em;
+                  line-height: 1.4em;
+                  transition: color .3s cubic-bezier(.73, .03, .31, 1);
+                }
+              }
+              .figure {
+                float: right;
+                width: 125px;
+                height: 105px;
+                margin-left: 1em;
+                img {
+                  width: 100%;
+                }
+              }
+            }
+            .item-bottom {
+              display: block;
+              padding-top: 1em;
+              margin-left: 40px;
+              margin-right: 40px;
+              font-weight: bold;
+              color: #999;
+              position: relative;
+              &:before {
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
+                width: 21px;
+                height: 18px;
+                margin-right: 10px;
+                background: url("http://www.vivo.com.cn/images/vivo-gb-ico.png?v=9") no-repeat -432px -184px;
+              }
+              &:after {
+                content: "";
+                width: 20px;
+                height: 1px;
+                background: #ccc;
+                position: absolute;
+                top: 0;
+                left: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+.footer {
+  position: relative;
+  height: 350px;
+  .footer-content {
+    width: 100%;
+    height: 350px;
+    background: #222222;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    .main {
+      text-align: center;
+      padding-top: 40px;
+      .main-logo {
+        img {
+          width: 125px;
+        }
+
+      }
+      .main-share {
+        margin-top: 20px;
+        a {
+          display: inline-block;
+          margin: 0 15px;
+          vertical-align: middle;
+          &:last-child {
+            width: 140px;
+            height: 36px;
+            background-color: #535353;
+            border-radius: 18px;
+            text-align: left;
+            position: relative;
+            line-height: 36px;
+            transition: .3s;
+            margin-left: 45px;
+            &:after {
+              display: block;
+              content: '';
+              width: 1px;
+              height: 45px;
+              background: #666;
+              position: absolute;
+              top: 50%;
+              left: -30px;
+              margin-top: -22px;
+            }
+            &:hover {
+              background-color: #008cd6;
+            }
+            b {
+              display: inline-block;
+              vertical-align: middle;
+              width: 36px;
+              height: 36px;
+              background-position: -243px -83px;
+              margin-bottom: 4px;
+              background-color: transparent;
+
+            }
+            span {
+              color: white;
+            }
+          }
+
+          b {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: inline-block;
+            background: #535353 url("http://www.vivo.com.cn/images/vivo-gb-ico.png?v=9") no-repeat;
+            background-size: 600px 400px;
+            overflow: hidden;
+            transition: background-color .3s ease;
+          }
+          .item1 {
+            background-position: -420px -80px;
+            &:hover {
+              background: #f04545 url("http://www.vivo.com.cn/images/vivo-gb-ico.png?v=9") no-repeat -420px -80px;
+            }
+          }
+          .item2 {
+            background-position: -555px -80px;
+            &:hover {
+              background: #20a900 url("http://www.vivo.com.cn/images/vivo-gb-ico.png?v=9") no-repeat -555px -80px;
+            }
+          }
+          .item3 {
+            background-position: -285px -80px;
+            &:hover {
+              background: #008cd6 url("http://www.vivo.com.cn/images/vivo-gb-ico.png?v=9") no-repeat -285px -80px;
+            }
+          }
+          .item4 {
+            background-position: -330px -80px;
+            &:hover {
+
+              background: #2185ee url("http://www.vivo.com.cn/images/vivo-gb-ico.png?v=9") no-repeat -330px -80px;
+            }
+          }
+          .item5 {
+            background-position: -194px -80px;
+            &:hover {
+              background: #42b0f4 url("http://www.vivo.com.cn/images/vivo-gb-ico.png?v=9") no-repeat -194px -80px;
+            }
+          }
+        }
+      }
+      .main-sitelinks {
+        margin-top: 40px;
+        a {
+          color: #666;
+          text-decoration: none;
+          margin: 0 6px;
+          transition: color .3s ease;
+          font-size: 14px;
+          &:hover {
+            color: #008cd6;
+          }
+        }
+      }
+      .main-copyright {
+        color: #666;
+        font-size: 12px;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+a {
+  cursor: pointer;
+}
+
+.goTop {
+  position: fixed;
+  bottom: -50px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, .3);
+  z-index: 9999;
+  transition: background-color .8s cubic-bezier(0.316967, 0.989541, 0.310022, 1), bottom .5s .1s cubic-bezier(0.316967, 0.989541, 0.310022, 1);
+  &:hover {
+    background: #008cd6;
+  }
+  a {
+    display: block;
+    width: 45px;
+    height: 45px;
+    margin: 2px;
+    overflow: hidden;
+    background: url("http://www.vivo.com.cn/images/vivo-gb-ico.png?v=9") no-repeat center;
+    background-position: -120px 0;
+
+  }
+}
+
+//小于1500px
+@media all and (max-width: 1500px) {
+  .showStyle {
+    .main {
+      .item {
+        height: 360px;
+        img {
+          margin-left: -320px;
+        }
+      }
+    }
+  }
+}
+
+//小于1400px
+@media all and (max-width: 1400px) {
+  .header {
+    .main {
+      .logo {
+        margin-left: 2em;
+      }
+      .nav {
+        margin: auto;
+        ul {
+          li {
+            padding: 0 1em;
+          }
+        }
+      }
+      .assembly {
+        margin-right: 2em;
+      }
+    }
+  }
+
+  .showStyle {
+    .main {
+      .item {
+        height: 300px;
+        img {
+          margin-left: -266px;
+        }
+      }
+    }
+  }
+
+  .carousel-content {
+    .carousel {
+      .main-carousel {
+        .title {
+          img {
+            height: 31px !important;
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    .activity {
+      overflow: hidden;
+      width: 100%;
+      h2 {
+        margin-left: 2em;
+        margin-right: 2em;
+      }
+      .list {
+        width: calc(100% - 4em);
+        margin-left: 2em;
+        margin-right: 2em;
+      }
+    }
+    .dynamic {
+      width: 100%;
+      overflow: hidden;
+      h2 {
+        margin-left: 1.5em;
+        margin-right: 2em;
+      }
+      .main {
+        width: calc(100% - 4em);
+        margin-left: 2em;
+        margin-right: 2em;
+      }
+    }
+    .media {
+      .main {
+        width: calc(100% - 4em);
+        margin-left: 2em;
+        margin-right: 2em;
+        div {
+          .list {
+            .item {
+              .item-top {
+                .cont {
+                  width: 60%;
+                }
+                .figure {
+                  margin-left: 0;
+                  float: left;
+                  margin-bottom: 1em;
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  .media {
+    overflow: hidden;
+    .main {
+      width: 100%;
+
+    }
+
+  }
+}
+
+//小于1200px
+@media all and (max-width: 1200px) {
+  .header {
+    .main {
+      .logo {
+        margin-left: 2em;
+      }
+      .nav {
+        ul {
+          width: 620px;
+          li {
+            padding: 0 .8em;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+//小于1000px
+@media all and (max-width: 1000px) {
+  .content {
+    .activity {
+      overflow: hidden;
+      width: 100%;
+      h2 {
+        margin-left: 2em;
+        margin-right: 2em;
+      }
+      .list {
+        width: calc(100% - 4em);
+        margin-left: 2em;
+        margin-right: 2em;
+        .item {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+//小于900px
+@media all and (max-width: 900px) {
+  .header {
+    .main {
+      .logo {
+        margin-left: 2em;
+      }
+      .nav {
+        margin-left: 15%;
+        ul {
+          width: 620px;
+          li {
+            padding: 0 .8em;
+          }
+        }
+      }
+
+    }
+  }
+
+  .showStyle {
+    .main {
+      .item {
+        height: 260px;
+        img {
+          margin-left: -231px;
+        }
+      }
+    }
+  }
+
+  .content {
+    .activity {
+      .list {
+        width: calc(100% - 4em);
+        margin-left: 2em;
+        margin-right: 2em;
+      }
+    }
+  }
+}
+
+//小于768px
+@media all and (max-width: 768px) {
+  .header {
+    height: 50px;
+    .menu-list {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      transition: color .3s ease, transform .3s .41s ease, opacity .3s .41s ease, height .5s ease-out;
+      ul {
+        list-style: none;
+        padding-top: 10px;
+        background-color: white;
+        height: 1000px;
+        li {
+          font-weight: 100;
+          width: 100%;
+          height: 1em;
+          padding: 1em 0;
+          margin: 0 10px;
+          line-height: 1em;
+          color: inherit;
+          padding-left: 1em;
+        }
+      }
+    }
+    .main {
+      height: 50px;
+      .menu {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 50%;
+        margin-top: -15px;
+        right: 15px;
+        i {
+          display: block;
+          position: relative;
+          width: 100%;
+          height: 100%;
+          &:after {
+            content: "";
+            transition: all .3s .1s ease-out;
+            width: 30px;
+            height: 30px;
+            background: url("http://www.vivo.com.cn/images/vivo-gb-ico-x2.png?v=8") no-repeat 4px -30px;
+            top: 0;
+            left: 0;
+            background-size: 600px 400px;
+            display: inline-block;
+            overflow: hidden;
+            vertical-align: middle;
+            position: absolute;
+            opacity: 1;
+            transform: scale(1);
+          }
+          &:before {
+            content: "";
+            transition: all .3s .1s ease-out;
+            width: 30px;
+            height: 30px;
+            background: url("http://www.vivo.com.cn/images/vivo-gb-ico-x2.png?v=8") no-repeat -20px -30px;
+            top: 0;
+            left: 0;
+            background-size: 600px 400px;
+            display: inline-block;
+            overflow: hidden;
+            vertical-align: middle;
+            position: absolute;
+            opacity: 0;
+            transform: scale(.1);
+          }
+        }
+      }
+      .open-menu {
+        i {
+          &:before {
+            opacity: 1;
+            transform: scale(1);
+          }
+          &:after {
+            opacity: 0;
+            transform: scale(.1);
+          }
+        }
+      }
+      .logo {
+        height: 50px;
+        line-height: 50px;
+        margin-left: 1em;
+        img {
+          width: 70px;
+        }
+      }
+      .nav {
+        display: none;
+      }
+      .assembly {
+        display: none;
+      }
+    }
+  }
+
+  .showStyle {
+    .main {
+      flex-direction: column;
+      .item1 {
+        background: #f0f0f0;
+      }
+      .item2 {
+        background: #000000;
+      }
+      .item3 {
+        background: #f0f0f0;
+      }
+    }
+  }
+
+  .content {
+    .activity {
+      padding-top: 4em;
+      h2 {
+        margin-left: 1em;
+      }
+      .list {
+        padding-left: 1em;
+        padding-right: 1em;
+        margin: 0 !important;
+        box-sizing: border-box;
+        .item {
+          width: 100%;
+          margin-bottom: 2.5em;
+        }
+      }
+    }
+    .dynamic {
+      padding-top: 1em;
+      .main {
+        margin-left: 1em;
+        margin-right: 1em;
+        .list {
+          .item {
+            width: 100%;
+            margin-bottom: 2.5em;
+          }
+        }
+      }
+    }
+    .media {
+      margin-top: 0;
+      .main {
+        margin-left: 1em;
+        margin-right: 1em;
+        padding-bottom: 0;
+        padding-top: 3em;
+        div {
+          .list {
+            .item {
+              width: 100%;
+              margin-bottom: 1.5em;
+              padding-bottom: 1em;
+              border-bottom: 1px solid #ccc;
+              .item-top {
+                margin: 0 87px;
+                .figure {
+                  float: right;
+                }
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    .footer-content {
+      //min-width: 618px;
+      .main {
+        .main-share {
+          a {
+            margin: 0 8px;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+@media all and (max-width: 450px) {
+  .media {
+    .main {
+      div {
+        .list {
+          .item {
+            .cont {
+              text-align: center;
+              width: 100% !important;
+            }
+            .figure {
+              margin-right: 25%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

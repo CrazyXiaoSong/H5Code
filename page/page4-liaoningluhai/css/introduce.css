@@ -1,0 +1,244 @@
+@charset "UTF-8";
+/*企业介绍*/
+.backPho{
+    width: 100%;
+    height: 245px;
+    background: url(../images/058db6bb471d4b269fafe80119d0d951.jpg) no-repeat;
+}
+.backPho .box{
+    width: 100%;
+    background-image: url("../images/black.5.png");
+}
+.backPho .wrap .title{
+    font-size: 38px;
+    padding-top: 60px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+.backPho .wrap p{
+    font-size: 24px;
+    font-family: Arial;
+    line-height: 3;
+    color: white;
+    text-align: center;
+}/*导航*/
+.backPho .nav{
+    width: 100%;
+    height: 45px;
+    background-color: #0082D8;
+}
+.backPho .nav .wrap li{
+    width: 10%;
+    float: left;
+    list-style: none;
+    text-align: center;
+}
+.backPho .nav .wrap .first1{
+    background-color: #056fb5;
+}
+.backPho .nav .wrap li a{
+    text-decoration: none;
+    color: white;
+    line-height: 45px;
+}
+/*网页的主体部分*/
+.main{
+    width: 100%;
+}
+/*公司介绍*/
+.main .jieshao{
+    width: 100%;
+    height: 480px;
+    background-image: url("../images/ab_part01.jpg");
+}
+.main .jieshao .wrap h1{
+    font-size: 40px;
+    color: #0081d8;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.main .jieshao .wrap h2{
+    width: 50%;
+    text-align: center;
+    font-size: 27px;
+    font-weight: bold;
+}
+.main .jieshao .fix .right img{
+    float: right;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+.main .jieshao .fix .right p{
+    font-size: 15px;
+    line-height: 2.0;
+}
+/*企业文化*/
+.main .culture{
+    background-image: url(../images/ab_part02.jpg);
+    text-align: center;
+    padding-top: 30px;
+    min-height: 570px;
+}
+.wrap h1{
+    font-size: 40px;
+    color: #0081d8;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.wrap h2{
+    width: auto;
+    font-size: 24px;
+    color: #666;
+    font-family: Calibri;
+    font-weight: normal;
+    text-align: center;
+}
+.main .culture .bottom{
+    width: 1000px;
+    margin: 50px auto 0;
+    height: 330px;
+    background-color: rgba(255,255,255,0.7);
+}
+.main .culture .bottom .box{
+    width: 33.33%;
+    height: 100%;
+    float: left;
+}
+.main .culture .bottom .box .icon{
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    background: url(../images/cul_ico.png) no-repeat;
+    margin: 30px auto 0;
+}
+.main .culture .bottom .box .icon2{
+    background-position: -140px 0;
+}
+.main .culture .bottom .box .icon3{
+    background-position: -280px 0;
+}
+.main .culture .bottom .box .title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+/*公司荣誉*/
+.main .honor .wrap .con ul{
+    width: 320px;
+    height: 45px;
+    margin: auto;
+}
+.main .honor .wrap .con li{
+    width: 120px;
+    height: 45px;
+    float: left;
+    list-style: none;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    margin-right: 20px;
+}
+.main .honor .wrap .con .first{
+    color: white;
+    background-color: #f86d11;
+    border-bottom: 3px solid #8c3800;
+}
+.main .honor .wrap .con .last{
+    color: black;
+    background-color: #eeeeee;
+}
+.main .honor .wrap .con .show ul{
+    display: block;
+    width: 1000px;
+    height: 160px;
+    margin-bottom: 60px;
+}
+.main .honor .wrap .con .show li{
+    width: 250px;
+    height: 160px;
+    list-style: none;
+    float:right;
+    margin: 30px 40px;
+}
+.main .honor .wrap .con .show li img{
+    height: 150px;
+}
+/*组织结构*/
+.main .orange{
+    background-color: #ededed;
+}
+/*合作伙伴*/
+.main .partner{
+    min-height: 780px;
+    background: #2a3136;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.main .partner h1{
+    color: white;
+}
+.main .partner h2{
+    color: #208dda;
+}
+.main .partner .list-adv .full-row li{
+    list-style: none;
+    float: left;
+    width: 25%;
+    margin: 8px 8px;
+}
+/*联系我们*/
+.main .withUs{
+    min-height: 343px;
+    background-image: url(../images/ab_part06.png);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.main .withUs .contact-us{
+    width: 217px;
+    height: 347px;
+    background: url(../images/contactbg.png) no-repeat;
+    margin: 0 auto;
+    padding: 35px 55px 0;
+    color: #fff;
+}
+.main .withUs .contact-us h1{
+    font-size: 32px;
+    color: white;
+    text-align: center;
+}
+.main .withUs .contact-us ul li{
+    line-height: 2.2;
+}
+.main .withUs .contact-us ul li a{
+    text-decoration: none;
+    color: white;
+}
+.main .withUs .contact-us ul li .ico{
+    display: inline-block;
+    overflow: hidden;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background: url(../images/ico.png);
+    margin-right: 5px;
+}
+.main .withUs .contact-us ul li span{
+    display: block;
+    text-indent: 30px;
+}
+.main .withUs .contact-us ul li .ico2{
+    background-position: -20px 0;
+}
+.main .withUs .contact-us ul li .ico3{
+    background-position: -40px 0;
+}
+.main .withUs .contact-us ul li .ico4{
+    background-position: -60px 0;
+}
+.main .withUs .contact-us ul li .ico5{
+    background-position: -80px 0;
+}

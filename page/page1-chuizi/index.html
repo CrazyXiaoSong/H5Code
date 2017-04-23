@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>锤子科技</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/lunbo.css"/>
+    <link rel="stylesheet" href="css/homepage.css"/>
+    <script src="js/angular.js"></script>
+</head>
+<body data-spy="scroll" data-target="#scroller"  ng-app="myApp" ng-controller="changeImg">
+<div id="scroller" class="sr-only">
+    <ul id="myScroller" class="nav nav-pills nav-stacked">
+        <li><a href="#part1"></a></li>
+        <li><a href="#part2"></a></li>
+        <li><a href="#shop-4"></a></li>
+        <li><a href="#M-shop-4"></a></li>
+    </ul>
+</div>
+<div class="header" id="header">
+    <div class="container">
+        <div class="row headerStyle">
+            <div class="visible-xs col-xs-4">
+                <span class="glyphicon glyphicon-align-justify menuBtn"></span>
+            </div>
+
+            <div class="col-sm-1 col-xs-4 col-lg-offset-0 col-sm-offset-0 col-md-offset-0 logo_div">
+                <a class="logo"></a>
+            </div>
+            <div class="visible-xs col-xs-2 text-right">
+                <span class="glyphicon glyphicon-shopping-cart rightBtn"></span>
+            </div>
+            <div class="visible-xs col-xs-2">
+                <span class="glyphicon glyphicon-user rightBtn"></span>
+            </div>
+            <div class="hidden-xs col-sm-10 col-lg-7 col-md-8 col-md-offset-2 col-lg-offset-3">
+                <ul>
+                    <li><a href="#" style="opacity: 1">在线商城</a></li>
+                    <li><a href="#">Smartisan M1 / M1L</a></li>
+                    <li><a href="#">Smartisan OS</a></li>
+                    <li><a href="#">欢喜云</a></li>
+                    <li><a href="#">应用下载</a></li>
+                    <li><a href="#">官方论坛</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-1 col-md-1 hidden-xs hidden-sm">
+                <button type="button" class="btn btn-default myBtn">登录</button>
+            </div>
+        </div>
+        <!-- 手机端菜单-->
+        <div class="row visible-xs headerStyle-xs clearfix">
+
+                <div class="line clearfix">
+                    精选<span>></span>
+                </div>
+                <div class="line clearfix">
+                    Smartisan M1 / M1L<span>></span>
+                </div>
+                <div class="line clearfix">
+                    Smartisan T2<span>></span>
+                </div>
+                <div class="line clearfix">
+                    耳机 / 音箱<span>></span>
+                </div>
+                <div class="line clearfix">
+                    背壳 / 保护套<span>></span>
+                </div>
+                <div class="line clearfix">
+                    “情怀”背壳<span>></span>
+                </div>
+                <div class="line clearfix">
+                    其他周边<span>></span>
+                </div>
+                <div class="line clearfix">
+                    保修服务<span>></span>
+                </div>
+                <div class="line clearfix">
+                    全部商品<span>></span>
+                </div>
+                <div class="myTable">
+                    <div class="single-table">
+                        <span class="glyphicon glyphicon-briefcase"></span>
+                        锤子科技商城
+                    </div>
+                    <div class="single-table">
+                        <span class="glyphicon glyphicon-phone"></span>
+                        Smartisan M1/M1L
+                    </div>
+                    <div class="single-table">
+                        <span class="glyphicon glyphicon-leaf"></span>
+                        Smartisan M1/M1L
+                    </div>
+                    <div class="single-table">
+                        <span class="glyphicon glyphicon-leaf"></span>
+                        Smartisan M1/M1L
+                    </div>
+                    <div class="single-table">
+                        <span class="glyphicon glyphicon-leaf"></span>
+                        Smartisan M1/M1L
+                    </div>
+                    <div class="single-table"></div>
+                    <div class="single-table"></div>
+                    <div class="single-table"></div>
+
+                </div>
+
+        </div>
+    </div>
+</div>
+<div class="willHidden">
+<div class="container hidden-sm">
+    <nav class="navbar navbar-default hidden-xs">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">精选</a>
+            </div>
+            <ul class="nav navbar-nav" id="nav-index">
+                <li><a href="#">手机</a></li>
+                <li><a href="#">耳机/音箱</a></li>
+                <li><a href="#">背壳 / 保护套</a></li>
+                <li><a href="#">“情怀”背壳</a></li>
+                <li><a href="#">其他周边</a></li>
+                <li><a href="#">保修服务</a></li>
+                <li><a href="#">全部商品</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#"  id="shoppingCart">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                        <span>购物车</span>
+                        <span class="badge">0</span>
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="container-fluid hidden-md hidden-lg">
+    <nav class="navbar navbar-default hidden-xs">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">精选</a>
+            </div>
+            <ul class="nav navbar-nav" id="nav-index-md">
+                <li><a href="#">手机</a></li>
+                <li><a href="#">耳机/音箱</a></li>
+                <li><a href="#">背壳 / 保护套</a></li>
+                <li><a href="#">“情怀”背壳</a></li>
+                <li><a href="#">其他周边</a></li>
+                <li><a href="#">保修服务</a></li>
+                <li><a href="#">全部商品</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                        <span class="hidden-sm">购物车</span>
+                        <span class="badge hidden-sm">0</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="container visible-lg clearfix">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="lunbo lunbo1">
+                <img src="images/bg_left.png" class="beijing left tu1"/>
+                <img src="images/phone_left.png" class="phone left tu2"/>
+                <img src="images/erji_left.png" class="erji left tu3"/>
+                <ul class="page" id="changeImg1">
+                    <li class="yuandian "></li>
+                    <li class="yuandian yuanbianse yuanchange1"></li>
+                </ul>
+            </div>
+            <div class="lunbo lunbo2">
+
+                <img src="images/red-left.png" class="beijing left tu1"/>
+                <img src="images/word-left.png" class="phone left tu2"/>
+                <img src="images/time-left.png" class="erji left tu3"/>
+                <ul class="page" id="changeImg2">
+                    <li class="yuandian yuanbianse yuanchange2"></li>
+                    <li class="yuandian "></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="part2" class="container hidden-lg">
+    <!--<img src="images/image-newyear.png" class="image-newyear">-->
+    <div id="carousel">
+        <div id="imgContainer">
+            <img id="firstCarouselImg" src="images/slide1.png" alt="img1"/>
+            <!--<img id="lastCarouselImg" style="display: none" src="images/slide2.png" alt="img2"/>-->
+        </div>
+        <ul id="allDot">
+            <li class="active"></li>
+            <li></li>
+
+        </ul>
+
+    </div>
+
+</div>
+<div class="container" id="part1">
+    <!-- 商品四大分类---大屏-->
+    <div id="shop-4" class="visible-lg-block">
+        <div class="btn-group btn-group-justified">
+            <a href="#" class="btn btn-default myShop">
+                <img src="http://image.smartisanos.cn/resource/9a1899686fd9bdfd18cc265eaa831da0.jpg@0o_0l_610w_100q.src">
+
+                <p class="onHover"></p>
+            </a>
+            <a href="#" class="btn btn-default myShop">
+                <img src="http://image.smartisanos.cn/resource/f032ec729ccc2ec75a02c4e45759ffd7.jpg@0o_0l_610w_100q.src">
+
+                <p class="onHover"></p>
+            </a>
+            <a href="#" class="btn btn-default myShop">
+                <img src="http://image.smartisanos.cn/resource/486d4af33d03321c613fae982479f0a9.jpg@0o_0l_610w_100q.src">
+
+                <p class="onHover"></p>
+            </a>
+            <a href="#" class="btn btn-default myShop">
+                <img src="http://image.smartisanos.cn/resource/1310726e7f152b12a0bd2d36c084d70a.jpg@0o_0l_610w_100q.src">
+
+                <p class="onHover"></p>
+            </a>
+        </div>
+    </div>
+    <!-- 商品四大分类---大屏除外-->
+    <div id="M-shop-4" class="row fourCommodity hidden-lg">
+        <div class="col-md-4 hotShop-md col-xs-6 onHover">
+            <a href="#">
+                <img src="http://image.smartisanos.cn/resource/9a1899686fd9bdfd18cc265eaa831da0.jpg@0o_0l_610w_100q.src">
+            </a>
+        </div>
+        <div class="col-md-4 hotShop-md col-xs-6 onHover">
+            <a href="#">
+                <img src="http://image.smartisanos.cn/resource/f032ec729ccc2ec75a02c4e45759ffd7.jpg@0o_0l_610w_100q.src">
+            </a>
+        </div>
+        <div class="col-md-4 hotShop-md col-xs-6 onHover">
+            <a href="#">
+                <img src="http://image.smartisanos.cn/resource/486d4af33d03321c613fae982479f0a9.jpg@0o_0l_610w_100q.src">
+            </a>
+        </div>
+        <div class="hidden-md hotShop-md col-xs-6 onHover hidden-lg">
+            <a href="#">
+                <img src="http://image.smartisanos.cn/resource/1310726e7f152b12a0bd2d36c084d70a.jpg@0o_0l_610w_100q.src">
+            </a>
+        </div>
+    </div>
+    <!-- 热门商品-->
+    <div class="row hotCommodity">
+        <ul class="list-group">
+            <li class="list-group-item first-li">热门商品</li>
+            <li class="list-group-item last-li">
+                <!-- 电脑和大屏电脑端-->
+                <ul class="hidden-xs hidden-sm myHotCommodity clearfix">
+                    <li class="pull-left details">
+                        <img ng-hide="changeMyImg2" src="http://img01.smartisanos.cn/38/1000223/100022302/FF6E3D787C07983FA4C2C281C48E03C9/253X253@2x.jpg"
+                             alt=""/>
+                        <img ng-show="changeMyImg2" src="http://img01.smartisanos.cn/38/1000223/100022303/1ECD9A694236BBDA7EB8F58860AAE325/253X253@2x.jpg"
+                             alt=""/>
+                        <label>Smartisan M1/M1L 软胶保护套</label>
+
+                        <p class="small briefIntroduction">TPU环保材质、细腻防滑、防油污</p>
+
+                        <p class="colorSelection">
+                            <span class="red" ng-click="toggleImg2(false)"></span><span ng-click="toggleImg2(true)" class="brown"></span>
+                        </p>
+
+                        <p class="price">
+                            ¥ <span class="RMB">49.00</span>
+                        </p>
+                    </li>
+                    <li class="pull-left goShopping">
+                        <img ng-show="changeMyImg" src="http://img01.smartisanos.cn/9D/1000231/100023102/A4E5E36B7A1826E0E127F74722C29E2F/253X253@2x.jpg"
+                             alt=""/>
+                        <img ng-hide="changeMyImg" src="http://img01.smartisanos.cn/E3/1000230/100023001/804B82E4C05516E822667A23EE311F7C/253X253.jpg"
+                             alt=""/>
+
+                        <label>Smartisan M1/M1L 软胶保护套</label>
+
+                        <p class="small briefIntroduction">TPU环保材质、细腻防滑、防油污</p>
+
+                        <p class="colorSelection">
+                            <span class="gray" ng-click="toggleImg(false)"></span><span ng-click="toggleImg(true)" class="black"></span>
+                        </p>
+
+                        <p class="price">
+                            ¥ <span class="RMB">49.00</span>
+                        </p>
+                    </li>
+                    <li class="pull-left details">
+                        <img src="http://img01.smartisanos.cn/78/1000227/100022701/FE5D6AB15ED2FCA6DB8A23590CFCAE8B/253X253@2x.jpg"
+                             alt=""/>
+                        <label>Smartisan M1/M1L 软胶保护套</label>
+
+                        <p class="small briefIntroduction">TPU环保材质、细腻防滑、防油污</p>
+
+                        <p class="colorSelection">
+
+                        </p>
+
+                        <p class="price">
+                            ¥ <span class="RMB">39.00</span>
+                        </p>
+                    </li>
+                    <li class="pull-left goShopping">
+                        <img src="http://img01.smartisanos.cn/32/1000229/100022901/C37037C509CAA418ECF73223E276D7D3/253X253@2x.jpg"
+                             alt=""/>
+                        <label>Smartisan M1/M1L 软胶保护套</label>
+
+                        <p class="small briefIntroduction">TPU环保材质、细腻防滑、防油污</p>
+
+                        <p class="colorSelection">
+
+                        </p>
+
+                        <p class="price">
+                            ¥ <span class="RMB">49.00</span>
+                        </p>
+                    </li>
+                </ul>
+                <!-- 手机和平板端-->
+                <ul class="hidden-lg hidden-md clearfix myHotCommodity-sm">
+                    <li class="pull-left">
+                        <img ng-hide="changeMyImg2" src="http://img01.smartisanos.cn/38/1000223/100022302/FF6E3D787C07983FA4C2C281C48E03C9/253X253@2x.jpg"
+                             alt=""/>
+                        <img ng-show="changeMyImg2" src="http://img01.smartisanos.cn/38/1000223/100022303/1ECD9A694236BBDA7EB8F58860AAE325/253X253@2x.jpg"
+                             alt=""/>
+                        <label>Smartisan M1/M1L 软胶保护套</label>
+
+                        <p class="small briefIntroduction">TPU环保材质、细腻防滑、防油污</p>
+
+                        <p class="colorSelection">
+                            <span class="red" ng-click="toggleImg2(false)"></span><span ng-click="toggleImg2(true)" class="brown"></span>
+                        </p>
+
+                        <p class="price">
+                            ¥ <span class="RMB">49.00</span>
+                        </p>
+                    </li>
+                    <li class="pull-left">
+                        <!--<img src="http://img01.smartisanos.cn/9D/1000231/100023102/A4E5E36B7A1826E0E127F74722C29E2F/253X253@2x.jpg">-->
+                        <img ng-show="changeMyImg" src="http://img01.smartisanos.cn/9D/1000231/100023102/A4E5E36B7A1826E0E127F74722C29E2F/253X253@2x.jpg"
+                             alt=""/>
+                        <img ng-hide="changeMyImg" src="http://img01.smartisanos.cn/E3/1000230/100023001/804B82E4C05516E822667A23EE311F7C/253X253.jpg"
+                             alt=""/>
+                        <label>Smartisan M1/M1L 软胶保护套</label>
+
+                        <p class="small briefIntroduction">TPU环保材质、细腻防滑、防油污</p>
+
+                        <p class="colorSelection">
+                            <span class="gray" ng-click="toggleImg(false)"></span><span ng-click="toggleImg(true)" class="black"></span>
+                        </p>
+
+                        <p class="price">
+                            ¥ <span class="RMB">49.00</span>
+                        </p>
+                    </li>
+                    <li class="pull-left">
+                        <img src="http://img01.smartisanos.cn/78/1000227/100022701/FE5D6AB15ED2FCA6DB8A23590CFCAE8B/253X253@2x.jpg">
+                        <label>Smartisan M1/M1L 软胶保护套</label>
+
+                        <p class="small briefIntroduction">TPU环保材质、细腻防滑、防油污</p>
+
+                        <p class="colorSelection">
+
+                        </p>
+
+                        <p class="price">
+                            ¥ <span class="RMB">49.00</span>
+                        </p>
+                    </li>
+                    <li class="pull-left">
+                        <img src="http://img01.smartisanos.cn/32/1000229/100022901/C37037C509CAA418ECF73223E276D7D3/253X253@2x.jpg">
+                        <label>Smartisan M1/M1L 软胶保护套</label>
+
+                        <p class="small briefIntroduction">TPU环保材质、细腻防滑、防油污</p>
+
+                        <p class="colorSelection">
+
+                        </p>
+
+                        <p class="price">
+                            ¥ <span class="RMB">49.00</span>
+                        </p>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+    <!-- 官方精选-->
+    <div class="row officialSelection">
+        <ul class="list-group">
+            <li class="list-group-item">官方精选</li>
+            <li class="list-group-item clearfix">
+                <div class="col-lg-6 col-md-6 col-sm-12 firstImg border-left-bottom">
+                    <img src="http://image.smartisanos.cn/resource/5d24f98818458de69e63105d528ef0f7.jpg@0o_0l_1220w_100q.src">
+                </div>
+                <div class="col-lg-3 col-md-3 col-xs-6 clearfix onHover border-left-bottom details">
+                    <img class="noFirstImg"
+                         src="http://img01.smartisanos.cn/15/1000145/100014501/5F487D0EAE9648384348F13A9F4CDC09/253X253@2x.jpg">
+                    <label>Smartisan T2 </label>
+
+                    <p class="small briefIntroduction">全金属中框、正反面 2.5D 玻璃面板、全网通</p>
+
+                    <p class="colorSelection">
+
+                    </p>
+
+                    <p class="price">
+                        ¥ <span class="RMB">1999.00</span>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-xs-6 clearfix onHover border-left-bottom details">
+                    <img class="noFirstImg"
+                         src="http://img01.smartisanos.cn/16/1000136/100013608/61865F3B7EAEA8E1719E603F02F01D94/253X253@2x.jpg">
+                    <label>Smartisan T2 </label>
+
+                    <p class="small briefIntroduction">全金属中框、正反面 2.5D 玻璃面板、全网通</p>
+
+                    <p class="colorSelection">
+                    </p>
+
+                    <p class="price">
+                        ¥ <span class="RMB">1999.00</span>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-xs-6 clearfix onHover border-left-bottom details">
+                    <img class="noFirstImg"
+                         src="http://img01.smartisanos.cn/BF/1000218/100021804/A8A1F6ADD9F2385153B0FC5B3B71F58E/253X253@2x.jpg">
+                    <label>Smartisan T2 </label>
+
+                    <p class="small briefIntroduction">全金属中框、正反面 2.5D 玻璃面板、全网通</p>
+
+                    <p class="colorSelection">
+
+                    </p>
+
+                    <p class="price">
+                        ¥ <span class="RMB">1999.00</span>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-xs-6 clearfix onHover border-left-bottom details">
+                    <img class="noFirstImg"
+                         src="http://img01.smartisanos.cn/4E/1000219/100021906/72E54A89C6027750E0A58512E7E03BA9/253X253@2x.jpg">
+                    <label>Smartisan T2 </label>
+
+                    <p class="small briefIntroduction">全金属中框、正反面 2.5D 玻璃面板、全网通</p>
+
+                    <p class="colorSelection">
+
+                    </p>
+
+                    <p class="price">
+                        ¥ <span class="RMB">1999.00</span>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-xs-6 clearfix onHover border-left-bottom goShopping">
+                    <img class="noFirstImg"
+                         src="http://img01.smartisanos.cn/97/1000228/100022801/1514706FF18DCAFA10CB1AFFEA7CE45A/253X253@2x.jpg">
+                    <label>Smartisan T2 </label>
+
+                    <p class="small briefIntroduction">全金属中框、正反面 2.5D 玻璃面板、全网通</p>
+
+                    <p class="colorSelection">
+                    </p>
+
+                    <p class="price">
+                        ¥ <span class="RMB">1999.00</span>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-xs-6 clearfix onHover border-left-bottom goShopping">
+                    <img class="noFirstImg"
+                         src="http://img01.smartisanos.cn/A2/1000224/100022401/C0006780EB1D1332ECA24CD838B38061/253X253@2x.jpg">
+                    <label>Smartisan T2 </label>
+
+                    <p class="small briefIntroduction">全金属中框、正反面 2.5D 玻璃面板、全网通</p>
+
+                    <p class="colorSelection">
+                    </p>
+
+                    <p class="price">
+                        ¥ <span class="RMB">1999.00</span>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 品牌精选-->
+    <div class="row officialSelection">
+        <ul class="list-group">
+            <li class="list-group-item">品牌精选</li>
+            <li class="list-group-item clearfix">
+                <div class="col-lg-6 col-md-6 col-sm-12 firstImg">
+                    <img src="http://image.smartisanos.cn/resource/098e60d23f424f8ed2fad2cb05ff53b6.jpg@0o_0l_1220w_100q.src">
+                </div>
+                <div class="col-lg-3 col-md-3 col-xs-6 clearfix onHover goShopping">
+                    <img class="noFirstImg"
+                         src="http://img01.smartisanos.cn/6F/1000222/100022201/5E4E40120D09FB6791F9430F914C6F68/253X253@2x.jpg">
+                    <label>Smartisan T2 </label>
+
+                    <p class="small briefIntroduction">全金属中框、正反面 2.5D 玻璃面板、全网通</p>
+
+                    <p class="colorSelection">
+                    </p>
+
+                    <p class="price">
+                        ¥ <span class="RMB">1999.00</span>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-xs-6 clearfix onHover goShopping">
+                    <img class="noFirstImg"
+                         src="http://img01.smartisanos.cn/E3/1000230/100023001/804B82E4C05516E822667A23EE311F7C/253X253@2x.jpg">
+                    <label>Smartisan T2 </label>
+
+                    <p class="small briefIntroduction">全金属中框、正反面 2.5D 玻璃面板、全网通</p>
+
+                    <p class="colorSelection">
+                    </p>
+
+                    <p class="price">
+                        ¥ <span class="RMB">1999.00</span>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-xs-6 clearfix onHover sellOut">
+                    <img class="noFirstImg"
+                         src="http://img01.smartisanos.cn/B4/100008102/F1C17C0DCC76FF5522B79C36534FBB43/253X253@2x.jpg">
+                    <label>Smartisan T2 </label>
+
+                    <p class="small briefIntroduction">全金属中框、正反面 2.5D 玻璃面板、全网通</p>
+
+                    <p class="colorSelection">
+                    </p>
+
+                    <p class="price">
+                        ¥ <span class="RMB">1999.00</span>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-xs-6 clearfix onHover sellOut">
+                    <img class="noFirstImg"
+                         src="http://img01.smartisanos.cn/B5/1000015/100001505/83670B52B6B7A037873D7A0177909C77/253X253@2x.jpg">
+                    <label>Smartisan T2 </label>
+
+                    <p class="small briefIntroduction">全金属中框、正反面 2.5D 玻璃面板、全网通</p>
+
+                    <p class="colorSelection">
+                    </p>
+
+                    <p class="price">
+                        ¥ <span class="RMB">1999.00</span>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-xs-6 clearfix onHover goShopping">
+                    <img class="noFirstImg"
+                         src="http://img01.smartisanos.cn/32/1000229/100022901/C37037C509CAA418ECF73223E276D7D3/253X253@2x.jpg">
+                    <label>Smartisan T2 </label>
+
+                    <p class="small briefIntroduction">全金属中框、正反面 2.5D 玻璃面板、全网通</p>
+
+                    <p class="colorSelection">
+                    </p>
+
+                    <p class="price">
+                        ¥ <span class="RMB">1999.00</span>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-xs-6 clearfix onHover sellOut">
+                    <img class="noFirstImg"
+                         src="http://img01.smartisanos.cn/31/100019502/FD8E8CDA61433FBA2098828F486294D3/1463137978/253X253@2x.jpg">
+                    <label>Smartisan T2 </label>
+
+                    <p class="small briefIntroduction">全金属中框、正反面 2.5D 玻璃面板、全网通</p>
+
+                    <p class="colorSelection">
+                    </p>
+
+                    <p class="price">
+                        ¥ <span class="RMB">1999.00</span>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 锤子科技动态-->
+    <div class="row officialSelection">
+        <ul class="list-group">
+            <li class="list-group-item">锤子科技动态</li>
+            <li class="list-group-item">
+                <div class="col-md-3 col-xs-6">
+                    <a href="#"><img
+                            src="http://image.smartisanos.cn/resource/fe533842ff2ce87f0090ec987a81f596.jpg@0o_0l_610w_100q.src"></a>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <a href="#"><img
+                            src="http://image.smartisanos.cn/resource/06a004708fd520f19c4e1f570a7d95eb.jpg@0o_0l_610w_100q.src"></a>
+                </div>
+                <div class="col-md-3 col-xs-6 img-hover">
+                    <a href="#"><img
+                            src="http://image.smartisanos.cn/resource/ae62ab86037ec0e25a111339e7612193.jpg@0o_0l_610w_100q.src"></a>
+                </div>
+                <div class="col-md-3 col-xs-6 img-hover">
+                    <a href="#"><img
+                            src="http://image.smartisanos.cn/resource/116e789829bb8a3ad9a317a52fb349ca.jpg@0o_0l_610w_100q.src"></a>
+                </div>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- 锤子应用-->
+    <div class="row myApp">
+        <ul class="list-group">
+            <li class="list-group-item title">锤子应用
+                <a href="#" class="btn btn-default">全部应用></a>
+            </li>
+            <li class="list-group-item clearfix" id="clearPadding">
+                <div class="col-md-3 col-xs-6 onHover myApp-div-border border-left-bottom">
+                    <div class="img-App"><i class="App-img-1"></i></div>
+                    <div class="text-App">
+                        <h3>HandShaker</h3>
+
+                        <p>在 Mac 和 Windows 电脑上也可以方便自如地</p>
+
+                        <p>管理你在 Android 手机中的内容</p>
+                    </div>
+                    <div class="down-App">
+                        <i></i>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6 onHover myApp-div-border border-left-bottom">
+                    <div class="img-App"><i class="App-img-2"></i></div>
+                    <div class="text-App">
+                        <h3>HandShaker</h3>
+
+                        <p>在 Mac 和 Windows 电脑上也可以方便自如地</p>
+
+                        <p>管理你在 Android 手机中的内容</p>
+                    </div>
+                    <div class="down-App">
+                        <i></i>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6 onHover myApp-div-border border-left-bottom">
+                    <div class="img-App"><i class="App-img-3"></i></div>
+                    <div class="text-App">
+                        <h3>HandShaker</h3>
+
+                        <p>在 Mac 和 Windows 电脑上也可以方便自如地</p>
+
+                        <p>管理你在 Android 手机中的内容</p>
+                    </div>
+                    <div class="down-App">
+                        <i></i>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6 onHover myApp-div-border border-left-bottom">
+                    <div class="img-App"><i class="App-img-4"></i></div>
+                    <div class="text-App">
+                        <h3>HandShaker</h3>
+
+                        <p>在 Mac 和 Windows 电脑上也可以方便自如地</p>
+
+                        <p>管理你在 Android 手机中的内容</p>
+                    </div>
+                    <div class="down-App">
+                        <i></i>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- 论坛精选-->
+    <div class="row forum-selected">
+        <ul class="list-group">
+            <li class="list-group-item title">论坛精选</li>
+            <li class="list-group-item clearfix forum-selected-content">
+                <div class="col-md-3 col-xs-6 onHover border-left-bottom">
+                    <img src="http://image.smartisanos.cn/resource/20eb647d239525c8927f3e5a6af42b2c.jpg@0o_0l_490w_100q.src"
+                         alt=""/>
+
+                    <h3>【今日话题】来论坛和锤友一起聊聊</h3>
+
+                    <p>没事来论坛和一群趣味相投的锤友，坐下来打开脑洞，一起天马行空地聊聊。话题每周更新 2-3 次.</p>
+                    <a>阅读全文></a>
+                </div>
+                <div class="col-md-3 col-xs-6 onHover border-left-bottom">
+                    <img src="http://image.smartisanos.cn/resource/204ef1c1257c7c3d4f73d89fb6ff9f58.jpg@0o_0l_490w_100q.src"
+                         alt=""/>
+
+                    <h3>【今日话题】来论坛和锤友一起聊聊</h3>
+
+                    <p>没事来论坛和一群趣味相投的锤友，坐下来打开脑洞，一起天马行空地聊聊。话题每周更新 2-3 次.</p>
+                    <a>阅读全文></a>
+                </div>
+                <div class="col-md-3 col-xs-6 onHover border-left-bottom">
+                    <img src="http://image.smartisanos.cn/resource/74696a11f4c27c6c412d13f050036671.jpg@0o_0l_490w_100q.src"
+                         alt=""/>
+
+                    <h3>【今日话题】来论坛和锤友一起聊聊</h3>
+
+                    <p>没事来论坛和一群趣味相投的锤友，坐下来打开脑洞，一起天马行空地聊聊。话题每周更新 2-3 次.</p>
+                    <a>阅读全文></a>
+                </div>
+                <div class="col-md-3 col-xs-6 onHover border-left-bottom">
+                    <img src="http://image.smartisanos.cn/resource/2297cd7222ca16df8af984757fe8136a.jpg@0o_0l_490w_100q.src"
+                         alt=""/>
+
+                    <h3>【今日话题】来论坛和锤友一起聊聊</h3>
+
+                    <p>没事来论坛和一群趣味相投的锤友，坐下来打开脑洞，一起天马行空地聊聊。话题每周更新 2-3 次.</p>
+                    <a>阅读全文></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <div class="row myMenu hidden-xs hidden-sm">
+            <div class="col-md-1 footer-title">订单服务
+                <div class="col-md-12">
+                    <p>购买指南</p>
+
+                    <p>支付方式</p>
+
+                    <p>送货政策</p>
+                </div>
+            </div>
+            <div class="col-md-1 footer-title">服务支持
+                <div class="col-md-12">
+                    <p>购买指南</p>
+
+                    <p>支付方式</p>
+
+                    <p>送货政策</p>
+                </div>
+            </div>
+            <div class="col-md-1 footer-title">自助服务
+                <div class="col-md-12">
+                    <p>购买指南</p>
+
+                    <p>支付方式</p>
+
+                    <p>送货政策</p>
+                </div>
+            </div>
+            <div class="col-md-1 footer-title">媒体中心
+                <div class="col-md-12">
+                    <p>购买指南</p>
+
+                    <p>支付方式</p>
+
+                    <p>送货政策</p>
+                </div>
+            </div>
+            <div class="col-md-1 footer-title">关于公司
+                <div class="col-md-12">
+                    <p>购买指南</p>
+
+                    <p>支付方式</p>
+
+                    <p>送货政策</p>
+                </div>
+            </div>
+            <div class="col-md-1 footer-title">关注我们
+                <div class="col-md-12">
+                    <p>购买指南</p>
+
+                    <p>支付方式</p>
+
+                    <p>送货政策</p>
+                </div>
+            </div>
+            <div class="col-md-6 help hidden-xs hidden-sm">
+                <h3>400-619-0909</h3>
+
+                <p>周一至周日 9:00-18:00（仅收市话费）</p>
+                <a class="btn btn-default">
+                    <span class="glyphicon glyphicon-question-sign"></span>
+                    在线帮助</a>
+            </div>
+        </div>
+        <div class="row hidden-lg hidden-md">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseOne" class="grouping">
+                                订单服务
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            购买指南
+                        </div>
+                        <div class="panel-body">
+                            支付方式
+                        </div>
+                        <div class="panel-body">
+                            送货方式
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseTwo" class="grouping">
+                                服务支持
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            售后服务
+                        </div>
+                        <div class="panel-body">
+                            售后政策
+                        </div>
+                        <div class="panel-body">
+                            保修服务
+                        </div>
+                        <div class="panel-body">
+                            维修报价
+                        </div>
+                        <div class="panel-body">
+                            维修门店
+                        </div>
+                        <div class="panel-body">
+                            零售门店
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseThree" class="grouping">
+                                自助服务
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            热点咨询
+                        </div>
+                        <div class="panel-body">
+                            预约购买
+                        </div>
+                        <div class="panel-body">
+                            订单物流
+                        </div>
+                        <div class="panel-body">
+                            日常使用
+                        </div>
+                        <div class="panel-body">
+                            常见问题
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseFour" class="grouping">
+                                媒体中心
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            新闻动态
+                        </div>
+                        <div class="panel-body">
+                            官方视频
+                        </div>
+                        <div class="panel-body">
+                            图片资源
+                        </div>
+                        <div class="panel-body">
+                            时尚之选
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseFive" class="grouping">
+                                关于公司
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFive" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            公司简介
+                        </div>
+                        <div class="panel-body">
+                            获奖中心
+                        </div>
+                        <div class="panel-body">
+                            企业文化
+                        </div>
+                        <div class="panel-body">
+                            加入我们
+                        </div>
+                        <div class="panel-body">
+                            联系我们
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion"
+                               href="#collapsesix" class="grouping">
+                                关注我们
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapsesix" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            新浪微博
+                        </div>
+                        <div class="panel-body">
+                            官方微信
+                        </div>
+                        <div class="panel-body">
+                            官方贴吧
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row footer-bottom">
+            <div class="col-md-10 col-xs-12 footer-bottom-first" id="footer-bottom-first-text">
+                Copyright © 2017, Smartisan Digital Co., Ltd. All Rights Reserved.北京锤子数码科技有限公司
+                <ul class="community clearfix hidden-xs">
+                    <li><a href="#">法律声明</a></li>
+                    <li><a href="#">隐私条款</a></li>
+                    <li><a href="#">开发者中心</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 footer-bottom-last hidden-sm hidden-xs">
+                <!-- Single button -->
+                <div class="btn-group dropup">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        中文 <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">English</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row footer-last">
+            <div class="col-md-6">
+                <span>京ICP备14041720号-1</span>
+                <span>京ICP证140622号</span>
+                <span>京公网安备11010502025474</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+<!--快速到达顶部小按钮-->
+<div id="topBtn">
+    <div class="back-top"></div>
+
+</div>
+
+</body>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/carousel.js"></script>
+<script src="http://cdn.bootcss.com/gsap/1.19.0/TweenMax.min.js"></script>
+<script src="http://cdn.bootcss.com/gsap/1.19.0/plugins/ScrollToPlugin.min.js"></script>
+<script src="js/home.js"></script>
+</html>

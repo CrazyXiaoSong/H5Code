@@ -1,0 +1,10 @@
+@charset "UTF-8";
+.text{
+    width: 1000px;
+    height: 300px;
+    margin: -60px auto;
+}
+.text p{
+    font-size: 17px;
+    text-indent: 2em;
+}

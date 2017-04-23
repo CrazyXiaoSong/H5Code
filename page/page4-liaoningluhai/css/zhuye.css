@@ -1,0 +1,454 @@
+@charset "UTF-8";
+/*字体*/
+@keyframes dynamic {
+    0%{
+        background-image: url("../images/3db02e07ecca4cffb16ec98979a14ffd.jpg");
+    }
+    25%{
+        background-image: url("../images/8606c1c128fc415ead546738b8b39af1.jpg");
+    }
+    50%{
+        background-image: url("../images/82624a4ef11d4c46a9cd38e2f5e6a715.jpg");
+    }
+    75%{
+        background-image: url("../images/d26fbd965fd9445b8e35191bce1d6a61.jpg");
+    }
+    100%{
+        background-image: url("../images/3db02e07ecca4cffb16ec98979a14ffd.jpg");
+    }
+}
+@keyframes ppt {
+
+}
+/*动态轮播图*/
+.dynamic{
+    width: 100%;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    -webkit-animation: dynamic 10s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: forwards;
+    cursor: pointer;
+}
+.dynamic .text{
+    width: 1000px;
+    position: absolute;
+    left: -1000px;
+    top: 0;
+    z-index: 10;
+    margin-top: 7%;
+    color: #fff;
+    -webkit-transition: all 0.5s;
+}
+.dynamic:hover .text{
+    left: 0;
+}
+.dynamic .text .top{
+    width: 650px;
+    height: 74px;
+    line-height: 74px;
+    position: relative;
+    background-color: #1e8cda;
+    font-size: 38px;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 10px;
+}
+.dynamic .text .center{
+    width: 610px;
+    height: 70px;
+    line-height: 70px;
+    background-color: #1d2c36;
+    font-size: 30px;
+    font-family: "Arial";
+    padding: 0 20px;
+    margin-left: 200px;
+    margin-top: 30px;
+}
+.dynamic .text .bottom{
+    width: 119px;
+    font-size: 24px;
+    font-family: "Arial";
+    padding: 0 30px;
+    background-color: #F86C0F;
+    margin-left: 200px;
+    margin-top: 30px;
+}
+.dynamic .nav{
+    width: 306px;
+    height: 142px;
+    background: url(../images/duo.png) no-repeat;
+    position: relative;
+    left: 40%;
+    top: 68.4%;
+}
+.dynamic .nav .duo1{
+    width: 108px;
+    height: 117px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.dynamic .nav .duo1:hover{
+    background-image: url("../images/duo1.png");
+}
+.dynamic .nav .duo2{
+     width: 117px;
+     height: 109px;
+     position: absolute;
+     left: 49px;
+     bottom: 58px;
+ }
+.dynamic .nav .duo2:hover{
+    background-image: url("../images/duo2.png");
+}
+.dynamic .nav .duo3{
+    width: 115px;
+    height: 108px;
+    position: absolute;
+    left: 160px;
+    bottom: 58px;
+}
+.dynamic .nav .duo3:hover{
+    background-image: url("../images/duo3.png");
+}
+.dynamic .nav .duo4{
+    width: 97px;
+    height: 110px;
+    position: absolute;
+    left: 218px;
+    bottom: 0;
+}
+.dynamic .nav .duo4:hover{
+    background-image: url("../images/duo4.png");
+}
+/*产品服务*/
+.service{
+    background: url(../images/iprobg.jpg) center top no-repeat;
+    padding-bottom: 40px;
+    height: 351px;
+    width: 100%;
+}
+.service .contant{
+    width: 1000px;
+    height: 100%;
+    margin: auto;
+}
+.service .contant .title{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+.service .contant .title a{
+    text-decoration: none;
+}
+.service .contant .title .cn{
+    font-size: 32px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+}
+.service .contant .title .en{
+    font-size: 24px;
+    text-align: center;
+    color: #1e8cda;
+    font-family: Calibri;
+}
+.service .contant .photo .tuwen{
+    width: 24.8%;
+    height: 177px;
+    float: left;
+    text-align: center;
+}
+.service .contant .photo .tuwen a{
+    text-decoration: none;
+    color: #305379;
+    font-size: 20px;
+    font-weight: bold;
+}
+.service .contant .photo .tuwen .pic{
+    display: block;
+    width: 126px;
+    height: 126px;
+    background: url(../images/ip_ico.png) no-repeat;
+    overflow: hidden;
+    margin: 0 auto 15px;
+    transition: all 1s;
+}
+.service .contant .photo .tuwen:hover .pic{
+    transform: rotateY(180deg);
+}
+.service .contant .photo .tuwen:hover a{
+    color: #1E8CDA;
+}
+.service .contant .photo .tuwen .pic2{
+    background-position: -126px 0;
+}
+.service .contant .photo .tuwen .pic3{
+    background-position: -252px 0;
+}
+.service .contant .photo .tuwen .pic4{
+    background-position: -378px 0;
+}
+/*我们的优势*/
+.ourAdvantage{
+    margin-top: -38px;
+    position: relative;
+    width: 100%;
+    height: 579px;
+    overflow: hidden;
+}
+.ourAdvantage .img1{
+    width: 100%;
+    height: 579px;
+    z-index: 5;
+}
+.ourAdvantage .text{
+    width: 905px;
+    height: 575px;
+    position: absolute;
+    right: -905px;
+    top: 0;
+    -webkit-transition: all 0.5s;
+    z-index: 10;
+}
+.ourAdvantage:hover .text{
+    right: 0;
+}
+.ourAdvantage .text .left{
+    padding: 10px 10px 0 10px;
+    width: 423px;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    background-color: #21262a;
+    border-bottom: #1e8cda 6px solid;
+    z-index: 15;
+    opacity: 0.8;
+}
+.ourAdvantage .text .right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 579px;
+    width: 462px;
+    background-image: url("../images/textbg.png");
+    background-size: 439px 579px;
+}
+.ourAdvantage .text .right .main{
+    width: 400px;
+    margin: 90px 61px;
+}
+.ourAdvantage .text .right .title{
+    text-align: right;
+    font-size: 36px;
+    font-weight: bold;
+    color: #1e8cda;
+    line-height: 1.2;
+}
+.ourAdvantage .text .right .tag{
+    text-align: right;
+    font-size: 27px;
+    font-weight: bold;
+    color: #f86c0f;
+    border-bottom: #1e8cda 3px solid;
+    line-height: 1.2;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.ourAdvantage .text .right .text{
+    width: 400px;
+    margin: 200px 0;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.8;
+}
+/*成功案例*/
+.case{
+    background: #2a3136 url(../images/case_bg.png) 98% 43px no-repeat;
+    width: 100%;
+    height: 374px;
+    cursor: pointer;
+}
+.case .title{
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+.case .title a{
+    text-decoration: none;
+}
+.case .title .cn{
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+.case .title .en{
+    font-size: 24px;
+    text-align: center;
+    color: #1e8cda;
+    font-family: Calibri;
+}
+.case .bottom{
+    width: 92%;
+    height: 234px;
+    background-color: white;
+}
+.case .bottom .div{
+    width: 25%;
+    height: 234px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+.case .bottom .div1 .top{
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/9f19ca2d56e044f4ae035924ece01c52.jpg");
+    background-size: 100% 100%;
+}
+.case .bottom .div2 .top{
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/fd0e5430d25d45d993d664d5ee937ac9.jpg");
+    background-size: 100% 100%;
+}
+.case .bottom .div3 .top{
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/e969b88211114ae6b04ad6c28446d9db.jpg");
+    background-size: 100% 100%;
+}
+.case .bottom .div4 .top{
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/0e1a45f41a054b55a8a6af751c7ada31.jpg");
+    background-size: 100% 100%;
+}
+.case .bottom .div .bottom{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: all 0.5s;
+}
+.case .bottom .div .bottom .title{
+    width: 70%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+.case .bottom .div .bottom .zoom{
+    width: 47px;
+    height: 46px;
+    margin: 40px auto 0;
+    display: block;
+    background-image: url("../images/zoom.png");
+}
+.case .bottom .div:hover .bottom{
+    top: 0;
+}
+/*最新动态*/
+.news{
+    width: 100%;
+    height: 450px;
+    padding-bottom: 50px;
+}
+.news .title{
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+.news .title a{
+    text-decoration: none;
+}
+.news .title .cn{
+    font-size: 32px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+.news .title .en{
+    font-size: 24px;
+    text-align: center;
+    color: #1e8cda;
+    font-family: Calibri;
+}
+.news .contant{
+    height: 315px;
+    width: 1000px;
+    margin: auto;
+}
+.news .contant .main{
+    height: 294px;
+    width: 224px;
+    float: left;
+    margin: 2px 30px;
+    border: 1px solid #C3C3C3;
+    border-radius: 5px;
+    padding: 8px;
+}
+.news .contant .main .box .img{
+    display: block;
+    width: 224px;
+    height: 150px;
+    overflow: hidden;
+}
+.news .contant .main .box .img img{
+    width: 224px;
+    height: 150px;
+    -webkit-transition: all 0.5s;
+}
+.news .contant .main .box a{
+    color: #565656;
+    text-decoration: none;
+    -webkit-transition: all 0.5s;
+}
+.news .contant .main .box h2{
+    font-size: 14px;
+    height: 34px;
+    line-height: 34px;
+    font-weight: normal;
+    margin-top: -20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.news .contant .main .box .text{
+    font-size: 13px;
+    line-height: 22px;
+    height: 44px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.news .contant .main .box span{
+    display: block;
+    width: 95px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    font-size: 14px;
+    color: #f86c0f;
+    border: #f86c0f 1px solid;
+    border-radius: 3px;
+    margin: 10px auto;
+    -webkit-transition: all 0.5s;
+}
+.news .contant .main .box:hover img{
+    transform: scale(1.2);
+}
+.news .contant .main .box:hover a{
+    color: #1E9AE4;
+}
+.news .contant .main .box:hover span{
+    color: white;
+    background-color: #f86c0f;
+}
+
+

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>苹果官网轮播图</title>
+    <style>
+        html, div, body, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            line-height: 100%;
+            vertical-align: baseline;
+            background: transparent;
+        }
+
+        ol, ul, li, ul li {
+            list-style: none;
+        }
+
+        :focus {
+            outline: 0;
+        }
+
+        ins {
+            text-decoration: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        article, aside, dialog, details, footer, figure, header, hgroup, menu, media, nav, section {
+            display: block;
+            padding: 0;
+            margin: 0;
+        }
+
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, iframe, fieldset, input, textarea, p, blockquote, th, td, button {
+            padding: 0;
+            margin: 0;
+        }
+
+        fieldset, img, button {
+            border: 0;
+        }
+
+        body, input, select, textarea {
+            font-family: '微软雅黑 Regular', '微软雅黑';
+            color: #333;
+            font-size: 12px;
+        }
+
+        body {
+            background: #fff;
+            min-width: 320px;
+            mix-width: 760px;
+            margin: 0 auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        a.block:after, a.block:before {
+            content: ' ';
+            display: table
+        }
+
+        .slide_wrapper {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden
+        }
+
+        .gallery_slide_wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: all .7s ease-in-out
+        }
+
+        .gallery_item {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            color: #333;
+            will-change: transform;
+            transition: all .7s ease-in-out;
+            -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0)
+        }
+
+        .gallery_item[data-idx="0"] {
+            background-color: #000
+        }
+
+        .gallery_item[data-idx="2"] {
+            background-color: #F3F3F3
+        }
+
+        .gallery_item[data-idx="0"] .gallery_image {
+            background-size: auto 100%;
+            background: url(https://www.apple.com/cn/home/images/gallery/iphone_alt_large.jpg) no-repeat center center;
+        }
+
+        .gallery_item[data-idx="1"] .gallery_image {
+            background-image: url(http://cdn.attach.qdfuns.com/notes/pics/201701/12/105738kuaxitrnwz8a48pw.jpg)
+        }
+
+        .gallery_item[data-idx="2"] .gallery_image {
+            background-image: url(http://cdn.attach.qdfuns.com/notes/pics/201701/12/105738p3meww4gwmyb4vox.jpg);
+            background-position: center center
+        }
+
+        .gallery_item[data-idx="3"] .gallery_image {
+            background-image: url(http://cdn.attach.qdfuns.com/notes/pics/201701/12/105738kuaxitrnwz8a48pw.jpg)
+        }
+
+        .gallery_item.zIndex {
+            z-index: 0
+        }
+
+        .gallery_item.zIndexTop {
+            z-index: 3
+        }
+
+        .gallery_item .gallery_image {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 110%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: bottom center
+        }
+
+        .gallery_item_content {
+            position: absolute;
+            z-index: 1000;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        .gallery_item_lockup_wrapper {
+            position: absolute;
+            top: 14%;
+            width: 100%;
+            text-align: center;
+            z-index: 2
+        }
+
+        .gallery_item_lockup_wrapper span {
+            font-size: 30px;
+            color: #000
+        }
+
+        .gallery_item[data-idx="0"] .gallery_item_lockup_wrapper span {
+            color: #fff
+        }
+
+        .nav_btn {
+            opacity: 0;
+            top: 0;
+            position: absolute;
+            cursor: pointer;
+            width: 20%;
+            height: 100%;
+            z-index: 3
+        }
+
+        .nav_btn:hover {
+            opacity: .5
+        }
+
+        .nav_btn.left {
+            left: 0;
+        }
+
+        .nav_btn.left .btn_left {
+            position: absolute;
+            top: 50%;
+            left: 50px;
+            width: 60px;
+            height: 100px;
+            margin-left: -30px;
+            margin-top: -50px;
+            background: url(http://cdn.attach.qdfuns.com/notes/pics/201701/12/105736uvrn3vu83x0xygsw.png) no-repeat center;
+        }
+
+        .nav_btn.right {
+            right: 0;
+        }
+
+        .nav_btn.right .btn_right {
+            position: absolute;
+            top: 50%;
+            right: 50px;
+            width: 60px;
+            height: 100px;
+            margin-left: -30px;
+            margin-top: -50px;
+            background: url(http://cdn.attach.qdfuns.com/notes/pics/201701/12/105952jlbuzlz0404j030l.png) no-repeat center;
+        }
+
+        .nav {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            list-style-type: none;
+            z-index: 10
+        }
+
+        .nav_slide {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 2px;
+            background: #fff;
+            background: rgba(128, 128, 128, .2);
+            margin-left: 10px;
+            cursor: pointer
+        }
+
+        .nav_slide:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 2px;
+            background: 0 0;
+            -webkit-transition: all .5s ease-in-out;
+            -moz-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out
+        }
+
+        .nav_slide.active:before {
+            width: 100%
+        }
+
+        .nav_slide:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -9px;
+            width: 100%;
+            height: 20px
+        }
+
+        .nav_slide:first-child {
+            margin-left: 0
+        }
+
+        .nav_slide .slide_btn {
+            width: 100%;
+            height: 2px;
+            background-color: transparent
+        }
+
+        .nav_slide.active .slide_btn {
+            background: gray
+        }
+
+        .nav_slide.autoplay .slide_btn {
+            background: gray;
+            -webkit-animation: scaleX 5s linear;
+            -webkit-animation-fill-mode: forwards;
+            transform-origin: 0;
+            -moz-animation: scaleX 5s linear;
+            -moz-animation-fill-mode: forwards;
+            transform-origin: 0
+        }
+
+        @-webkit-keyframes scaleX {
+            0% {
+                -webkit-transform: scaleX(0)
+            }
+            100% {
+                -webkit-transform: scaleX(1)
+            }
+        }
+
+        @-moz-keyframes scaleX {
+            0% {
+                -moz-transform: scaleX(0)
+            }
+            100% {
+                -moz-transform: scaleX(1)
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="slide_wrapper">
+    <div class="gallery_slide_wrapper">
+        <a class="gallery_item block" data-idx="0" href="javascript:;">
+            <div class="gallery_item_content">
+                <div class="gallery_item_lockup_wrapper">
+                    <span>iPhone 7</span>
+                </div>
+            </div>
+            <div class="gallery_image"></div>
+        </a>
+        <a class="gallery_item block" data-idx="1" href="javascript:;">
+            <div class="gallery_item_content">
+                <div class="gallery_item_lockup_wrapper">
+                    <span>Mac Book</span>
+                </div>
+            </div>
+            <div class="gallery_image"></div>
+        </a>
+        <a class="gallery_item block" data-idx="2" href="javascript:;">
+            <div class="gallery_item_content">
+                <div class="gallery_item_lockup_wrapper">
+                    <span>Watch</span>
+                </div>
+            </div>
+            <div class="gallery_image"></div>
+        </a>
+        <a class="gallery_item block" data-idx="3" href="javascript:;">
+            <div class="gallery_item_content">
+                <div class="gallery_item_lockup_wrapper">
+                    <span>Mac Book</span>
+                </div>
+            </div>
+            <div class="gallery_image"></div>
+        </a>
+    </div>
+</div>
+<script src="http://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://yangyunhe.oschina.io/my_blog/code_page/js/jquery-apple-slider.min.js"></script>
+<script>
+    $(".slide_wrapper").AppleSlider({imgNum: 4, autoplay: true});
+</script>

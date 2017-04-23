@@ -1,0 +1,545 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+.clearfix:after {
+  content: "";
+  display: inline-block;
+  clear: both;
+}
+body {
+  color: #333;
+  font-family: Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+}
+.header {
+  height: 75px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999;
+}
+.header .main {
+  max-width: 1170px;
+  min-width: 980px;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+.header .main .main-left {
+  height: 100%;
+  float: left;
+}
+.header .main .main-left img {
+  margin-top: 15.5px;
+  float: left;
+}
+.header .main .main-left ul {
+  height: 100%;
+  float: left;
+  margin-left: 18px;
+}
+.header .main .main-left ul li {
+  float: left;
+  height: 100%;
+  line-height: 75px;
+  padding: 0 20px;
+  font-size: 1.125em;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.header .main .main-left ul li:hover {
+  background-color: #12b7f5;
+}
+.header .main .main-right {
+  width: 330px;
+  float: right;
+  height: 100%;
+  font-size: 0.875em;
+}
+.header .main .main-right .register {
+  float: left;
+}
+.header .main .main-right .register a {
+  float: left;
+  display: block;
+  width: 96px;
+  padding: 39px 0 0 0;
+  color: #fff;
+  cursor: pointer;
+  background: transparent url(https://sqimg.qq.com/qq_product_operations/im/2015/icons.png) no-repeat 0 -244px;
+  margin-top: 18px;
+}
+.header .main .main-right .register a:hover {
+  background: transparent url(https://sqimg.qq.com/qq_product_operations/im/2015/icons.png) no-repeat 0 -284px;
+}
+.header .main .main-right .menu {
+  float: right;
+}
+.header .main .main-right .menu .menu-top {
+  margin-top: 16px;
+}
+.header .main .main-right .menu .menu-top a {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 30px;
+}
+.header .main .main-right .menu .menu-top a:hover {
+  color: #12b7f5;
+}
+.header .main .main-right .menu span {
+  text-indent: 30px;
+  display: block;
+  margin-top: 11px;
+  cursor: pointer;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+}
+.header .main .main-right .menu span:hover {
+  color: #12b7f5;
+}
+.warp {
+  height: 604px;
+  position: relative;
+}
+.warp .warp-list {
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  min-width: 1007px;
+  overflow: hidden;
+  position: relative;
+}
+.warp .warp-list .warp-item {
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.warp .warp-list .warp-item .warp-main {
+  width: 1173px;
+  height: 100%;
+  position: relative;
+  margin: 5px auto;
+}
+.warp .warp-list .warp-item .warp-main .downloadBtn {
+  background: url("https://sqimg.qq.com/qq_product_operations/im/2015/btn541b.png") no-repeat;
+  width: 386px;
+  height: 77px;
+  overflow: hidden;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.warp .warp-list .warp-item .warp-main .downloadBtn:hover {
+  background-position: 0 -77px;
+}
+.warp .warp-list .active {
+  opacity: 1;
+}
+.warp .warp-list .item1 {
+  overflow: hidden;
+  background: url("https://sqimg.qq.com/qq_product_operations/im/2016/pc/6.7/mb670_b.jpg") no-repeat center;
+}
+.warp .warp-list .item1 .warp-main .title {
+  display: block;
+  margin: 0 auto;
+}
+.warp .warp-list .item2 {
+  overflow: hidden;
+  background: url("https://sqimg.qq.com/qq_product_operations/im/2016/pc/pc_891_b.jpg") no-repeat center;
+}
+.warp .warp-list .item2 .warp-main {
+  position: relative;
+}
+.warp .warp-list .item2 .warp-main .downloadBtn {
+  position: absolute;
+  top: 75%;
+  left: 61px;
+}
+.warp .warp-list .item2 .warp-main .title {
+  display: block;
+  margin: 0 auto;
+}
+.warp .warp-allcircle {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 52px;
+  text-align: center;
+  background: transparent url(https://sqimg.qq.com/qq_product_operations/im/2015/linearbot.png) repeat-x left top;
+}
+.warp .warp-allcircle .warp-circle {
+  display: inline;
+  margin: 0 5px;
+  padding: 2px 7px;
+  background: transparent url(https://sqimg.qq.com/qq_product_operations/im/2015/nav.png) no-repeat center center;
+  cursor: pointer;
+}
+.warp .warp-allcircle .active {
+  background-image: url(https://sqimg.qq.com/qq_product_operations/im/2015/navcur.png);
+}
+.content h1 {
+  background: url("https://sqimg.qq.com/qq_product_operations/im/2015/brand.png") no-repeat center;
+  height: 280px;
+}
+.content .bgImg {
+  width: 100%;
+  position: relative;
+  background: url("https://sqimg.qq.com/qq_product_operations/im/2015/fisrtbg.jpg") no-repeat center fixed;
+  background-size: 100%;
+  height: 600px;
+}
+.content .content-item1 {
+  height: 584px;
+}
+.content .content-item1 .main {
+  width: 960px;
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+.content .content-item1 .main .phone {
+  position: absolute;
+  width: 664px;
+  height: 763px;
+  left: -32px;
+  bottom: 0;
+}
+.content .content-item1 .main .title {
+  position: absolute;
+  right: 7px;
+  top: 115px;
+  width: 487px;
+}
+.content .content-item1 .main .title h2 {
+  width: 100%;
+  height: 135px;
+  background: url("https://sqimg.qq.com/qq_product_operations/im/2015/qcall_txt.png") no-repeat;
+}
+.content .content-item1 .main .title p {
+  text-align: right;
+  line-height: 25px;
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  opacity: 0.6;
+}
+.content .content-item1 .main .title .p-bottom {
+  margin-bottom: 12px;
+}
+.content .content-item1 .main .title .more {
+  color: #12b7f5;
+  cursor: pointer;
+}
+.content .content-item1 .main .title ul {
+  background: transparent url(https://sqimg.qq.com/qq_product_operations/im/2015/qcall_figs.png) no-repeat 190px 41px;
+  min-height: 77px;
+  padding-top: 44px;
+  font-size: 14px;
+}
+.content .content-item1 .main .title ul li {
+  color: #a0a0a0;
+  float: right;
+  text-align: center;
+  padding: 58px 0 0;
+}
+.content .content-item1 .main .title ul .f3 {
+  width: 80px;
+  text-align: right;
+}
+.content .content-item1 .main .title ul .f2 {
+  width: 109px;
+  border-right: 1px solid #e9e9e9;
+}
+.content .content-item1 .main .title ul .f1 {
+  width: 156px;
+  border-right: 1px solid #e9e9e9;
+}
+.content .bgImg2 {
+  background: url("https://sqimg.qq.com/qq_product_operations/im/2015/update/avd.jpg") no-repeat center fixed;
+}
+.content .content-item2 {
+  height: 584px;
+}
+.content .content-item2 .main {
+  width: 960px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+}
+.content .content-item2 .main .main-left {
+  width: 450px;
+  position: absolute;
+  left: 7px;
+  top: 115px;
+}
+.content .content-item2 .main .main-left img {
+  margin-bottom: 20px;
+}
+.content .content-item2 .main .main-left p {
+  opacity: 0.6;
+  padding-left: 5px;
+  font-size: 18px;
+  letter-spacing: 0.12em;
+}
+.content .content-item2 .main .main-left .more {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #12b7f5;
+}
+.content .content-item2 .main .main-left ul {
+  background: transparent url(https://sqimg.qq.com/qq_product_operations/im/2015/qfile_figs.png) no-repeat 7px 41px;
+  width: 100%;
+  padding-top: 44px;
+  min-height: 77px;
+}
+.content .content-item2 .main .main-left ul li {
+  float: left;
+  text-align: center;
+  padding: 58px 0 0;
+  color: #a0a0a0;
+  font-size: 14px;
+}
+.content .content-item2 .main .main-left ul .f1 {
+  width: 94px;
+  text-indent: -12px;
+}
+.content .content-item2 .main .main-left ul .f2 {
+  width: 112px;
+  border-right: 1px solid #e9e9e9;
+  border-left: 1px solid #e9e9e9;
+}
+.content .content-item2 .main .main-left ul .f3 {
+  width: 108px;
+}
+.content .content-item2 .main .main-right {
+  position: absolute;
+  right: -100px;
+  bottom: 104px;
+  width: 597px;
+  height: 330px;
+  background: transparent url(https://sqimg.qq.com/qq_product_operations/im/2015/update/pic2.png) no-repeat 0 0;
+}
+.content .bgImg3 {
+  background-image: url("https://sqimg.qq.com/qq_product_operations/im/2015/blog.jpg");
+}
+.content .content-item3 .main {
+  width: 960px;
+  height: 584px;
+  position: relative;
+  margin: 0 auto;
+}
+.content .content-item3 .main .main-left {
+  position: absolute;
+  left: 88px;
+  bottom: 0;
+  width: 344px;
+  height: 506px;
+  background: transparent url(https://sqimg.qq.com/qq_product_operations/im/2015/update/pic3.png) no-repeat -30px 0;
+}
+.content .content-item3 .main .main-left .content {
+  position: relative;
+  left: 0;
+  top: 217px;
+  width: 291px;
+  height: 150px;
+}
+.content .content-item3 .main .main-left .content div {
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 150px;
+  opacity: 0;
+}
+.content .content-item3 .main .main-left .content .pic1 {
+  left: -122px;
+  background: transparent url(https://sqimg.qq.com/qq_product_operations/im/2015/qblog_fig1.png) no-repeat 0 0;
+}
+.content .content-item3 .main .main-left .content .active1 {
+  animation: zoomIn 0.2s cubic-bezier(0, 0.25, 0.08, 1) 0.4s;
+  animation-fill-mode: backwards;
+  opacity: 1;
+}
+.content .content-item3 .main .main-left .content .pic2 {
+  left: 70px;
+  background: transparent url(https://sqimg.qq.com/qq_product_operations/im/2015/qblog_fig2.png) no-repeat 0 0;
+}
+.content .content-item3 .main .main-left .content .active2 {
+  animation: zoomIn 0.2s cubic-bezier(0, 0.25, 0.08, 1) 0.5s;
+  animation-fill-mode: backwards;
+  opacity: 1;
+}
+.content .content-item3 .main .main-left .content .pic3 {
+  right: -119px;
+  background: transparent url(https://sqimg.qq.com/qq_product_operations/im/2015/qblog_fig3.png) no-repeat 0 0;
+}
+.content .content-item3 .main .main-left .content .active3 {
+  animation: zoomIn 0.2s cubic-bezier(0, 0.25, 0.08, 1) 0.6s;
+  animation-fill-mode: backwards;
+  opacity: 1;
+}
+.content .content-item3 .main .main-right {
+  position: absolute;
+  right: 7px;
+  top: 120px;
+  width: 495px;
+}
+.content .content-item3 .main .main-right h2 {
+  height: 135px;
+  background: transparent url(https://sqimg.qq.com/qq_product_operations/im/2015/qblog_txt.png) no-repeat 0 0;
+}
+.content .content-item3 .main .main-right p {
+  width: 100%;
+  margin-bottom: 12px;
+  line-height: 25px;
+  text-align: right;
+  opacity: 0.6;
+  font-size: 18px;
+  letter-spacing: 0.12em;
+}
+.content .content-item3 .main .main-right .more {
+  color: #12b7f5;
+}
+.content .content-item3 .main .main-right ul {
+  height: 100px;
+  background: transparent url(https://sqimg.qq.com/qq_product_operations/im/2015/qblog_figs.png) no-repeat 228px 41px;
+  text-align: right;
+  padding-top: 41px;
+}
+.content .content-item3 .main .main-right ul li {
+  float: right;
+  font-size: 14px;
+  color: #a0a0a0;
+  padding-top: 58px;
+}
+.content .content-item3 .main .main-right ul .f1 {
+  width: 83px;
+  text-align: right;
+  border-left: 1px solid #e9e9e9;
+}
+.content .content-item3 .main .main-right ul .f2 {
+  width: 100px;
+  text-align: center;
+  border-left: 1px solid #e9e9e9;
+}
+.content .content-item3 .main .main-right ul .f3 {
+  width: 118px;
+  text-align: center;
+}
+.footer {
+  width: 100%;
+  height: 348px;
+  padding-top: 34px;
+  background: #2a2a2a;
+  font-size: 0.75em;
+}
+.footer .footer-top {
+  width: 960px;
+  height: 205px;
+  margin: 0 auto;
+}
+.footer .footer-top .hot-product {
+  width: 460px;
+  padding-left: 8px;
+  float: left;
+}
+.footer .footer-top .hot-product h3 {
+  height: 50px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+}
+.footer .footer-top .hot-product a {
+  float: left;
+  padding-top: 65px;
+  background: transparent url(https://sqimg.qq.com/qq_product_operations/im/2015/plats1.png) no-repeat 0 0;
+  text-align: center;
+  font-size: 14px;
+  color: #979797;
+  cursor: pointer;
+}
+.footer .footer-top .hot-product .pic1 {
+  width: 68px;
+  margin-right: 35px;
+}
+.footer .footer-top .hot-product .pic1:hover {
+  background-position: 0px -93px;
+  color: #12b7f5;
+}
+.footer .footer-top .hot-product .pic2 {
+  width: 80px;
+  background-position: -105px 0;
+  margin-right: 30px;
+}
+.footer .footer-top .hot-product .pic2:hover {
+  background-position: -105px -93px;
+  color: #12b7f5;
+}
+.footer .footer-top .hot-product .pic3 {
+  width: 84px;
+  background-position: -210px 0;
+  margin-right: 30px;
+}
+.footer .footer-top .hot-product .pic3:hover {
+  background-position: -210px -93px;
+  color: #12b7f5;
+}
+.footer .footer-top .hot-product .pic4 {
+  width: 76px;
+  background-position: -326px 0;
+}
+.footer .footer-top .hot-product .pic4:hover {
+  background-position: -326px -93px;
+  color: #12b7f5;
+}
+.footer .footer-top .item {
+  width: 120px;
+  float: left;
+}
+.footer .footer-top .item h3 {
+  height: 25px;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+.footer .footer-top .item ul {
+  list-style: none;
+}
+.footer .footer-top .item ul li {
+  line-height: 22px;
+  color: #979797;
+  cursor: pointer;
+}
+.footer .footer-top .item ul li:hover {
+  color: #cfcfcf;
+}
+.footer .footer-bottom {
+  border-top: 1px solid #666;
+  width: 960px;
+  margin: 0 auto;
+  padding-top: 16px;
+}
+.footer .footer-bottom p {
+  color: #666;
+  text-align: center;
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/*# sourceMappingURL=index.css.map */

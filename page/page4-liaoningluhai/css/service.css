@@ -1,0 +1,95 @@
+@charset "UTF-8";
+.text h2{
+    text-align: center;
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+.text .te{
+    text-align: center;
+    font-size: 15px;
+    color: #0082d8;
+    margin-bottom: 15px;
+}
+.text .form p{
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 20px;
+}
+.text .form a{
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.text .form form{
+    width: 98%;
+    margin: auto;
+}
+.text .form form .span-4{
+    float: left;
+    width: 31%;
+    margin-right: 2%;
+}
+.text .form form .span-6{
+    float: left;
+    width: 47.5%;
+    margin-right: 2%;
+}
+.text .form form .span-4 .cont{
+    border: #c3c3c3 1px solid;
+    padding: 10px 10px;
+    min-height: 20px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+.text .form form .span-4 .cont .label{
+    float: left;
+}
+.text .form form .span-4 .cont .tip{
+    float: right;
+}
+.text .form form .span-4 .cont .input{
+    float: right;
+}
+.text .form form .span-4 .cont input{
+    border: none;
+    height: 25px;
+    vertical-align: middle;
+    background-color: #cce8cf;
+
+}
+.text .form form .span-4 .cont .input div{
+    float: right;
+    margin-right: 10px;
+}
+.text .form form .span-12{
+    float: left;
+    width: 98%;
+    margin-right: 2%;
+}
+.text .form form .span-12 .cont1{
+    height: 140px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    border: #c3c3c3 1px solid;
+    padding: 10px 10px;
+}
+.text .form form .span-12 .cont1 textarea{
+    width: 100%;
+    height: 100%;
+    background-color: #cce8cf;
+    border: none;
+}
+.text .form form .span-12 .btn{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #F8731A;
+    border-color: #F8731A;
+    border-bottom: #8c3800 3px solid;
+    padding: 0 50px;
+    cursor: pointer;
+}

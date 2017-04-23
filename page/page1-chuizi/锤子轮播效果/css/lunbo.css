@@ -1,0 +1,11 @@
+* { margin: 0; padding: 0; }
+ul { list-style: none; }
+.lunbo { position: relative; width: 1220px; margin: 0 auto; box-shadow: 0 3px 5px rgba(0, 0, 0, .5), inset 0 -1px 0 rgba(0, 0, 0, .5); }
+.tu1,  .tu2,  .tu3 { position: absolute; }
+.beijing { border-radius: 10px; width: 1220px; }
+.phone,  .erji { top: -27px; left: 40px; width: 1220px; }
+.xiaoshi { display: none; }
+.page { position: absolute; z-index: 10; top: 450px; left: 590px; }
+.yuandian { display: inline-block; width: 15px; height: 15px; background-color: whitesmoke; border-radius: 8px; margin-right: 10px; cursor: pointer; }
+.lunbo2 { display: none; }
+.yuanbianse { opacity: 0.2; }

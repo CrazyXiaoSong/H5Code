@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apple</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body id="Apple">
+<div class="header">
+    <div class="header-title">
+        <ul class="title-list">
+            <li>
+                <span class="item-apple"></span>
+            </li>
+            <li>
+                <span class="item-mac"></span>
+            </li>
+            <li>
+                <span class="item-ipad"></span>
+            </li>
+            <li>
+                <span class="item-iphone"></span>
+            </li>
+            <li>
+                <span class="item-watch"></span>
+            </li>
+            <li>
+                <span class="item-music"></span>
+            </li>
+            <li>
+                <span class="item-jszc"></span>
+            </li>
+            <li>
+                <span class="item-search"></span>
+            </li>
+            <li>
+                <span class="item-bag"></span>
+            </li>
+
+        </ul>
+    </div>
+    <div class="goTop"></div>
+    <div class="header-carousel">
+        <div class="main">
+            <div class="main-content">
+                <div class="gallery-slide-wrapper">
+                    <a class="item-center item">
+                        <div class="item-content">
+
+                        </div>
+                        <div class="item-bgImg bgImg1">
+
+                        </div>
+                    </a>
+                    <a class="item-right item">
+                        <div class="item-content">
+
+                        </div>
+                        <div class="item-bgImg bgImg2">
+                        </div>
+                    </a>
+                    <a class="item-left item">
+                        <div class="item-content">
+
+                        </div>
+                        <div class="item-bgImg bgImg3">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+<button onclick="changeImg()">开始</button>
+</div>
+</body>
+<script>
+    var mainSize = 0;
+    var bgImg1Num = 3;
+    var bgImg2Num = 2;
+    var bgImg3Num = 1;
+    var num1 = 2;
+    var size1 = 0;
+    var num2 = 1;
+    var size2 = 1519;
+    var size3 = -1519;
+    var num3 = 3;
+    var sum = 1;
+    function changeImg() {
+       /* if(sum == 1){
+            document.getElementsByClassName('item-center')[0].style.zIndex = "1";
+            document.getElementsByClassName('item-left')[0].style.zIndex = "1";
+            document.getElementsByClassName('item-right')[0].style.zIndex = "999";
+            sum++;
+        }else if(sum == 2){
+            document.getElementsByClassName('item-center')[0].style.zIndex = "1";
+            document.getElementsByClassName('item-right')[0].style.zIndex = "1";
+            document.getElementsByClassName('item-left')[0].style.zIndex = "999";
+            sum++;
+        }else if(sum == 3){
+            document.getElementsByClassName('item-center')[0].style.zIndex = "999";
+            document.getElementsByClassName('item-right')[0].style.zIndex = "1";
+            document.getElementsByClassName('item-left')[0].style.zIndex = "1";
+            sum++;
+        }*/
+        mainSize -=1519;
+        document.getElementsByClassName('gallery-slide-wrapper')[0].style.transform = "translate3d("+mainSize+"px, 0px, 0px)";
+        //translate3d(-3038px, 0px, 0px)
+
+
+
+
+        if(!(bgImg1Num%3)){
+            document.getElementsByClassName('bgImg1')[0].style.transform = "translate3d(1367.1px, 0px, 0px) scale3d(0.9, 0.9, 1)";
+            bgImg1Num++;
+        }else {
+            document.getElementsByClassName('bgImg1')[0].style.transform = "translate3d(0px, 0px, 0px) scale3d(1, 1, 1)";
+            bgImg1Num++;
+        }
+
+
+
+        if(!(bgImg2Num%3)){
+            document.getElementsByClassName('bgImg2')[0].style.transform = "translate3d(1367.1px, 0px, 0px) scale3d(0.9, 0.9, 1)";
+            bgImg2Num++;
+        }else {
+            document.getElementsByClassName('bgImg2')[0].style.transform = "translate3d(0px, 0px, 0px) scale3d(1, 1, 1)";
+            bgImg2Num++;
+        }
+
+        if(!(bgImg3Num%3)){
+            document.getElementsByClassName('bgImg3')[0].style.transform = "translate3d(1367.1px, 0px, 0px) scale3d(0.9, 0.9, 1)";
+            bgImg3Num++;
+        }else {
+            document.getElementsByClassName('bgImg3')[0].style.transform = "translate3d(0px, 0px, 0px) scale3d(1, 1, 1)";
+            bgImg3Num++;
+        }
+
+
+
+        if(!(num1%3) && num1 != 2){
+            size1 += 4557;
+            document.getElementsByClassName('item-center')[0].style.transform = "translate3d("+size1+"px, 0px, 0px)";
+            num1++;
+        }else {
+            num1++;
+        }
+
+        if(!(num2%3)){
+            size2 += 4557;
+
+            document.getElementsByClassName('item-right')[0].style.transform = "translate3d("+size2+"px, 0px, 0px)";
+
+            num2++;
+        }else {
+            num2++;
+        }
+        if(!(num3%3)){
+            size3 += 4557;
+            document.getElementsByClassName('item-left')[0].style.transform = "translate3d("+size3+"px, 0px, 0px)";
+            num3++;
+        }else {
+            num3++;
+        }
+    }
+</script>
+</html>
